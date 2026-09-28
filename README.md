@@ -1,14 +1,14 @@
 # C Fashion × Agentforce — Product Exchange Agent demo video
 
-Output: `CFashion_Agentforce_Product_Exchange.mp4` (1920×1080, 30 fps, 35.5 s, voiceover + subtitles).
+- `CFashion_Agentforce_Retail_Demo.mp4` — full demo (2:20, 1920×1080): intro → Salesforce data → site login → agent chat → outcome/end card, aligned to the recorded voiceover with subtitles.
+- `CFashion_Agentforce_Product_Exchange.mp4` — standalone end segment (TTS voiceover).
 
-## Rebuild
+## Rebuild the full demo
+Put the source files in `recordings/` (`salesforcedata.mp4`, `siteloginagent.mp4`, `agentchat.mp4`, `Agentforce_Retail_Demo.m4a`), then:
 ```sh
-npm install
-pip install kokoro-onnx soundfile imageio-ffmpeg
-python3 scripts/tts.py <dir with kokoro-v1.0.onnx + voices-v1.0.bin>   # -> audio/s1..s4.wav
+npm install && pip install pillow imageio-ffmpeg
 export FFMPEG=$(python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")
-mkdir -p out && node scripts/render.js   # -> out/video_silent.mp4
-sh scripts/mux.sh                        # -> out/CFashion_Agentforce_Product_Exchange.mp4
+mkdir -p build out && python3 scripts/build.py
 ```
-Scenes live in `video/index.html` (timings are absolute seconds in CSS `--s/--e/--d`).
+- `plan.json` : section timings, clip pieces `[srcStart, srcEnd, targetDuration]`, subtitles.
+- `video/intro.html`, `video/end.html`: animated scenes; `video/frame.html`: recording frame + subtitle style.

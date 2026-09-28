@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Recording Frame</title>
+<link rel="stylesheet" href="common.css">
+<style>
+body.subsOnly{background:transparent}
+body.subsOnly .bg,body.subsOnly .brand,body.subsOnly .tag,body.subsOnly .win{display:none}
+.win{position:absolute;left:100px;top:130px;width:1720px;height:790px;border-radius:22px;background:#0B1F3A;box-shadow:0 30px 80px #032D6038;outline:8px solid #fff}
+.sub{opacity:1;animation:none;font-size:30px;padding:12px 28px;bottom:0}
+.subs{bottom:22px}
+.tag{display:flex;align-items:center;gap:10px}
+.tag i{width:10px;height:10px;border-radius:50%;background:#E3066A;display:inline-block}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5l2.3 6.2 6.2 2.3-6.2 2.3L12 18.5l-2.3-6.2L3.5 10l6.2-2.3zM19 15l1 2.6 2.5 1-2.5 1-1 2.6-1-2.6-2.5-1 2.5-1z"/></symbol>
+</defs></svg>
+<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="grid"></div></div>
+<div class="brand" style="top:40px">
+  <div class="logo">C</div><span>C Fashion</span><span class="x">×</span>
+  <span class="af"><svg class="spark"><use href="#spark"/></svg>Agentforce</span>
+</div>
+<div class="tag" style="top:48px"><i></i><span id="label"></span></div>
+<div class="win"></div>
+<div class="subs"><div class="sub" id="sub"></div></div>
+<script>
+window.show = (label, sub, subsOnly) => {
+  document.getElementById('label').textContent = label || '';
+  const s = document.getElementById('sub'); s.textContent = sub || ''; s.style.display = sub ? '' : 'none';
+  document.body.classList.toggle('subsOnly', !!subsOnly);
+};
+document.getAnimations().forEach(a => { a.pause(); a.currentTime = 12000; });
+document.fonts.ready.then(() => { window.ready = true; });
+</script>
+</body>
+</html>

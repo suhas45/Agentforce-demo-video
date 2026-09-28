@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>C Fashion Intro</title>
+<link rel="stylesheet" href="common.css">
+<style>
+.center{position:absolute;inset:140px 80px 170px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.bigTitle{font-size:96px;font-weight:800;letter-spacing:-3px;line-height:1.05}
+.bigTitle .g,.h2 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cap{font-size:32px;color:var(--muted);margin-top:22px;font-weight:500}
+
+/* scene A: store */
+.shop{display:flex;gap:30px;margin-top:56px}
+.prod{width:250px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 14px 40px #0B1F3A12;text-align:left}
+.pimg{height:220px;border-radius:16px;display:grid;place-items:center;font-size:88px}
+.prod b{display:block;font-size:21px;margin-top:14px}
+.prod span{font-size:18px;color:var(--muted)}
+.cartb{margin-top:12px;font-size:16px;font-weight:700;color:#fff;background:var(--navy);border-radius:10px;padding:9px 12px;text-align:center}
+
+/* scene B: complicated */
+.mess{position:relative;width:1100px;height:420px;margin-top:40px}
+.bad{position:absolute;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #F3C2C9;border-radius:18px;padding:16px 22px;font-size:24px;font-weight:600;box-shadow:0 10px 30px #BA052210;color:#8E1B2E}
+.bad i{font-style:normal;font-size:30px}
+.knot{position:absolute;inset:0;margin:auto;width:160px;height:160px;border-radius:50%;background:#FDE8EB;display:grid;place-items:center;font-size:74px;border:3px dashed #E88A97}
+
+/* scene C: solution */
+.combo{display:flex;align-items:center;gap:40px;margin-top:60px}
+.tile{width:330px;height:220px;border-radius:30px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px #0B1F3A14;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.tile b{font-size:34px}
+.tile span{font-size:19px;color:var(--muted)}
+.cloud{width:120px;height:78px;border-radius:40px;background:var(--sky);position:relative}
+.cloud:before{content:"";position:absolute;width:64px;height:64px;border-radius:50%;background:var(--sky);left:18px;top:-28px}
+.cloud:after{content:"";position:absolute;width:48px;height:48px;border-radius:50%;background:var(--sky);left:62px;top:-16px}
+.plus{font-size:64px;font-weight:300;color:#9AA8BD}
+.pills{display:flex;gap:22px;margin-top:48px}
+.pill2{font-size:26px;font-weight:700;padding:14px 30px;border-radius:50px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px #0B1F3A10}
+.by{font-size:24px;color:var(--muted);font-weight:600;letter-spacing:4px;text-transform:uppercase}
+.by b{color:var(--navy)}
+
+/* scene D: hub */
+.hub{position:relative;width:1300px;height:560px;margin-top:10px}
+.core{position:absolute;left:50%;top:50%;width:300px;height:300px;margin:-150px 0 0 -150px;border-radius:50%;background:linear-gradient(135deg,#0176D3,#032D60);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 30px 90px #0176D350}
+.core b{font-size:34px}.core span{font-size:20px;color:#BFE0FF}
+.core .cloud{transform:scale(.8);background:#fff}.core .cloud:before,.core .cloud:after{background:#fff}
+.sat{position:absolute;width:300px;margin-left:-150px;text-align:left;white-space:nowrap;margin-top:-38px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;font-size:24px;font-weight:700;display:flex;align-items:center;gap:12px;box-shadow:0 10px 30px #0B1F3A12}
+.sat i{font-style:normal;font-size:28px}
+.links{position:absolute;inset:0}
+.links line{stroke:#0176D3;stroke-width:3;stroke-dasharray:8 8;opacity:.45}
+.lock{position:absolute;left:0;right:0;margin:auto;width:fit-content;bottom:-72px;display:flex;align-items:center;gap:10px;font-size:22px;font-weight:700;color:var(--ok);background:#E6F4EA;padding:10px 22px;border-radius:40px}
+</style>
+</head>
+<body>
+<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="grid"></div></div>
+
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5l2.3 6.2 6.2 2.3-6.2 2.3L12 18.5l-2.3-6.2L3.5 10l6.2-2.3zM19 15l1 2.6 2.5 1-2.5 1-1 2.6-1-2.6-2.5-1 2.5-1z"/></symbol>
+</defs></svg>
+
+<div class="brand fade" style="--d:.2s">
+  <div class="logo">C</div><span>C Fashion</span><span class="x">×</span>
+  <span class="af"><svg class="spark"><use href="#spark"/></svg>Agentforce</span>
+</div>
+<div class="tag fade" style="--d:.4s">Product Exchange Agent</div>
+
+<!-- A: 0 - 4.4  company -->
+<section class="scene" style="--s:0s;--e:4.2s">
+  <div class="center">
+    <div class="bigTitle up" style="--d:.2s">C Fashion — <span class="g">fashion retail</span></div>
+    <div class="cap up" style="--d:.6s">Customers shop and place orders online</div>
+    <div class="shop">
+      <div class="prod up" style="--d:1.2s"><div class="pimg" style="background:#FFF1D6">👗</div><b>A-Line Dress</b><span>Floral · $99</span><div class="cartb">Add to bag</div></div>
+      <div class="prod up" style="--d:1.5s"><div class="pimg" style="background:#E3EEFB">🧥</div><b>Bomber Jacket</b><span>Brown · $75</span><div class="cartb">Add to bag</div></div>
+      <div class="prod up" style="--d:1.8s"><div class="pimg" style="background:#E9F3FF">👖</div><b>Bootcut Jeans</b><span>Light Blue · $80</span><div class="cartb">Add to bag</div></div>
+      <div class="prod up" style="--d:2.1s"><div class="pimg" style="background:#EAF6EE">🩳</div><b>Bermuda Shorts</b><span>Navy · $180</span><div class="cartb">Add to bag</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- B: 4.4 - 8.4  complicated -->
+<section class="scene" style="--s:4.4s;--e:8.2s">
+  <div class="center">
+    <div class="bigTitle up" style="--d:4.6s">Exchanges &amp; returns…</div>
+    <div class="cap up" style="--d:6.6s;color:#BA0522;font-weight:700">…can be complicated</div>
+    <div class="mess">
+      <div class="knot pop" style="--d:6.8s">😩</div>
+      <div class="bad pop" style="--d:5.0s;left:40px;top:20px"><i>📝</i>Long return forms</div>
+      <div class="bad pop" style="--d:5.4s;right:40px;top:10px"><i>📞</i>Waiting on hold</div>
+      <div class="bad pop" style="--d:5.8s;left:0;bottom:40px"><i>✉️</i>Email back-and-forth</div>
+      <div class="bad pop" style="--d:6.2s;right:0;bottom:50px"><i>❓</i>Is my size in stock?</div>
+      <div class="bad pop" style="--d:6.6s;left:410px;bottom:-20px"><i>⏳</i>Manual processing</div>
+    </div>
+  </div>
+</section>
+
+<!-- C: 8.4 - 14.2  Conscendo solution -->
+<section class="scene" style="--s:8.4s;--e:14.0s">
+  <div class="center">
+    <div class="by up" style="--d:8.6s">Implemented by <b>Conscendo</b></div>
+    <div class="combo">
+      <div class="tile pop" style="--d:9.2s"><div class="cloud"></div><b>Salesforce</b><span>Trusted CRM platform</span></div>
+      <div class="plus fade" style="--d:9.8s">+</div>
+      <div class="tile pop" style="--d:10.2s"><svg style="width:84px;height:84px;color:var(--violet)"><use href="#spark"/></svg><b>Agentforce</b><span>AI agents that take action</span></div>
+    </div>
+    <div class="pills">
+      <div class="pill2 up" style="--d:11.4s">💬 Conversational experience</div>
+      <div class="pill2 up" style="--d:12.6s">✨ Truly seamless service</div>
+    </div>
+  </div>
+</section>
+
+<!-- D: 14.2 - 20.1  CRM hub -->
+<section class="scene" style="--s:14.2s;--e:99s">
+  <div class="center" style="justify-content:flex-start">
+    <div class="h2 up" style="--d:14.4s;margin-top:0;font-size:64px">Salesforce CRM — <span class="g">one central platform</span></div>
+    <div class="hub">
+      <svg class="links" viewBox="0 0 1300 560">
+        <line x1="650" y1="280" x2="230" y2="90" class="fade" style="--d:15.2s"/><line x1="650" y1="280" x2="230" y2="280" class="fade" style="--d:15.2s"/><line x1="650" y1="280" x2="230" y2="470" class="fade" style="--d:15.2s"/>
+        <line x1="650" y1="280" x2="1070" y2="90" class="fade" style="--d:15.2s"/><line x1="650" y1="280" x2="1070" y2="280" class="fade" style="--d:15.2s"/><line x1="650" y1="280" x2="1070" y2="470" class="fade" style="--d:15.2s"/>
+      </svg>
+      <div class="core pop" style="--d:14.8s"><div class="cloud"></div><b>Salesforce CRM</b><span>Fashion Retail</span></div>
+      <div class="sat pop" style="--d:15.6s;left:180px;top:90px"><i>👤</i>Contacts</div>
+      <div class="sat pop" style="--d:16.0s;left:180px;top:280px"><i>👗</i>Products</div>
+      <div class="sat pop" style="--d:16.4s;left:180px;top:470px"><i>📦</i>SKU Inventory</div>
+      <div class="sat pop" style="--d:16.8s;left:1120px;top:90px"><i>📍</i>Locations</div>
+      <div class="sat pop" style="--d:17.2s;left:1120px;top:280px"><i>🧾</i>Orders</div>
+      <div class="sat pop" style="--d:17.6s;left:1120px;top:470px"><i>🔄</i>Exchange / Return</div>
+      <div class="lock up" style="--d:18.2s">🔒 Retail data, securely managed</div>
+    </div>
+  </div>
+</section>
+
+<div class="subs">
+  <div class="sub" style="--s:0.2s;--e:4.3s">C Fashion is a fashion retail company. Shop and place orders online.</div>
+  <div class="sub" style="--s:4.5s;--e:8.3s">Exchanging or returning products, but returns can be complicated.</div>
+  <div class="sub" style="--s:8.4s;--e:14.1s">So, Conscendo implemented Salesforce and Agentforce for a conversational experience, delivering truly seamless service.</div>
+  <div class="sub" style="--s:14.2s;--e:19.9s">C Fashion uses Salesforce CRM as the central platform to securely manage its retail data.</div>
+</div>
+
+<script>
+window.setT = function(t){ document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000;}); };
+document.fonts.ready.then(()=>{window.ready=true;});
+</script>
+</body>
+</html>
