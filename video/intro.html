@@ -131,14 +131,18 @@
 </section>
 
 <div class="subs">
-  <div class="sub" style="--s:0.2s;--e:4.3s">C Fashion is a fashion retail company. Shop and place orders online.</div>
-  <div class="sub" style="--s:4.5s;--e:8.3s">Exchanging or returning products, but returns can be complicated.</div>
-  <div class="sub" style="--s:8.4s;--e:14.1s">So, Conscendo implemented Salesforce and Agentforce for a conversational experience, delivering truly seamless service.</div>
+  <div class="sub" style="--s:0.2s;--e:4.3s">C Fashion is a fashion retail company, where customers shop and place orders online.</div>
+  <div class="sub" style="--s:4.5s;--e:8.3s">But exchanging or returning products can be complicated.</div>
+  <div class="sub" style="--s:8.4s;--e:14.1s">So, Conscendo implemented Salesforce and Agentforce for a conversational experience that delivers truly seamless service.</div>
   <div class="sub" style="--s:14.2s;--e:19.9s">C Fashion uses Salesforce CRM as the central platform to securely manage its retail data.</div>
 </div>
 
 <script>
-window.setT = function(t){ document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000;}); };
+window.remap = t => { const A = window.ANCH; if (!A) return t;
+  let i = 0; while (i < A.length - 2 && t > A[i + 1][0]) i++;
+  const [r0, a0] = A[i], [r1, a1] = A[i + 1];
+  return t > r1 ? a1 + (t - r1) : a0 + (t - r0) * (a1 - a0) / (r1 - r0); };
+window.setT = function(t){ t = remap(t); document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000;}); };
 document.fonts.ready.then(()=>{window.ready=true;});
 </script>
 </body>

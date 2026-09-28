@@ -4,11 +4,13 @@
 - `CFashion_Agentforce_Product_Exchange.mp4` — standalone end segment (TTS voiceover).
 
 ## Rebuild the full demo
-Put the source files in `recordings/` (`salesforcedata.mp4`, `siteloginagent.mp4`, `agentchat.mp4`, `Agentforce_Retail_Demo.m4a`), then:
+Put the recordings in `recordings/` (`salesforcedata.mp4`, `siteloginagent.mp4`, `agentchat.mp4`), then:
 ```sh
-npm install && pip install pillow imageio-ffmpeg
+npm install && pip install pillow imageio-ffmpeg kokoro-onnx soundfile
+python3 scripts/voice.py <kokoro model dir>   # voiceover.json -> audio/voiceover.wav + audio/timings.json
 export FFMPEG=$(python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")
-mkdir -p build out && python3 scripts/build.py
+python3 scripts/build.py                      # -> CFashion_Agentforce_Retail_Demo.mp4
 ```
-- `plan.json` : section timings, clip pieces `[srcStart, srcEnd, targetDuration]`, subtitles.
-- `video/intro.html`, `video/end.html`: animated scenes; `video/frame.html`: recording frame + subtitle style.
+- `voiceover.json`: narration script (one voice, even pacing) + subtitle text.
+- `plan.json`: which recording piece plays under each narration line; crossfade length.
+- `video/intro.html`, `video/end.html`: animated scenes (retimed to the narration automatically); `video/frame.html`: recording frame + subtitle style.

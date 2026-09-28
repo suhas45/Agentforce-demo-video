@@ -1,0 +1,133 @@
+{
+ "intro": [
+  [
+   0.6,
+   5.725,
+   "C Fashion is a fashion retail company, where customers shop and place orders online."
+  ],
+  [
+   6.175,
+   9.396,
+   "But exchanging or returning products can be complicated."
+  ],
+  [
+   9.845,
+   17.724,
+   "So, Conscendo implemented Salesforce and Agentforce for a conversational experience that delivers truly seamless service."
+  ],
+  [
+   18.174,
+   24.573,
+   "C Fashion uses Salesforce CRM as the central platform to securely manage its retail data."
+  ]
+ ],
+ "sf": [
+  [
+   25.373,
+   30.061,
+   "As you can see, C Fashion's retail data is all managed within Salesforce."
+  ],
+  [
+   30.511,
+   35.765,
+   "Now, let's see how this Salesforce data powers the customer experience through Agentforce."
+  ]
+ ],
+ "login": [
+  [
+   36.565,
+   43.322,
+   "The customer can directly log in to the C Fashion website and start a conversation with the Product Exchange Assistant."
+  ]
+ ],
+ "chat": [
+  [
+   44.122,
+   46.851,
+   "The customer starts by asking, \u201cShow my orders.\u201d"
+  ],
+  [
+   47.301,
+   52.575,
+   "Agentforce identifies the logged-in customer and retrieves their orders from Salesforce."
+  ],
+  [
+   53.025,
+   56.657,
+   "The customer can also see which items are eligible for exchange."
+  ],
+  [
+   57.107,
+   60.924,
+   "The customer selects the A-line dress and chooses to exchange it."
+  ],
+  [
+   61.374,
+   64.105,
+   "Agentforce asks for the desired size and color."
+  ],
+  [
+   64.555,
+   66.672,
+   "The customer requests L in yellow."
+  ],
+  [
+   67.122,
+   71.496,
+   "The agent checks the requested combination against the available inventory."
+  ],
+  [
+   71.946,
+   77.719,
+   "If that combination is unavailable, Agentforce automatically provides alternative options."
+  ],
+  [
+   78.169,
+   82.022,
+   "The customer selects XL in blue from the available options."
+  ],
+  [
+   82.472,
+   88.257,
+   "Agentforce then confirms the selected product and asks the customer to approve the exchange."
+  ],
+  [
+   88.707,
+   95.333,
+   "Once the customer confirms, the agent processes the exchange and creates the exchange record in Salesforce."
+  ],
+  [
+   95.783,
+   104.373,
+   "Since the replacement product is lower in price than the original item, the customer is informed that they will receive a $34 refund."
+  ],
+  [
+   104.823,
+   113.253,
+   "Finally, the exchange confirmation is displayed directly in the chat, along with the exchange number EX-0071."
+  ]
+ ],
+ "end": [
+  [
+   114.053,
+   121.388,
+   "For the customer, this means a faster and more convenient way to resolve an exchange request, through a simple conversation."
+  ],
+  [
+   121.838,
+   131.097,
+   "For C Fashion, Agentforce helps automate repetitive exchange interactions, and reduces the need for service teams to manually handle these requests."
+  ],
+  [
+   131.547,
+   135.948,
+   "The customer simply explains what they need, and the agent takes care of the rest."
+  ],
+  [
+   136.398,
+   142.614,
+   "C Fashion with Agentforce: making product exchanges simple, conversational, and convenient."
+  ]
+ ],
+ "total": 144.814
+}

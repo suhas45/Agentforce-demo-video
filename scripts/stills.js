@@ -14,9 +14,9 @@ const P = JSON.parse(fs.readFileSync(plan));
     await p.evaluate(a => show(a, '', false), s.label);
     await p.screenshot({ path: `${dir}/frame_${i}.png` });
   }
-  for (const [i, s] of P.subs.entries()) {
-    await p.evaluate(a => show('', a, true), s[2]);
-    await p.screenshot({ path: `${dir}/sub_${i}.png`, omitBackground: true });
+  for (const [id, text] of P.subs) {
+    await p.evaluate(a => show('', a, true), text);
+    await p.screenshot({ path: `${dir}/sub_${id}.png`, omitBackground: true });
   }
   await b.close();
 })();

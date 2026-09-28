@@ -145,7 +145,11 @@
 </div>
 
 <script>
-window.setT = function(t){
+window.remap = t => { const A = window.ANCH; if (!A) return t;
+  let i = 0; while (i < A.length - 2 && t > A[i + 1][0]) i++;
+  const [r0, a0] = A[i], [r1, a1] = A[i + 1];
+  return t > r1 ? a1 + (t - r1) : a0 + (t - r0) * (a1 - a0) / (r1 - r0); };
+window.setT = function(t){ t = remap(t);
   document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000;});
   document.querySelectorAll('[data-count]').forEach(el=>{
     const [from,to,t0,t1]=el.dataset.count.split(',').map(Number);

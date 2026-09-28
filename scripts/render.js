@@ -12,6 +12,7 @@ const [page, arg, out] = process.argv.slice(2);
   const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
   await p.goto('file://' + path.resolve(page));
   await p.waitForFunction('window.ready');
+  if (process.env.ANCH) await p.evaluate(a => { window.ANCH = a; }, JSON.parse(process.env.ANCH));
   const name = path.basename(page, '.html');
   if (arg === 'preview') {
     for (const t of out.split(',').map(Number)) {
