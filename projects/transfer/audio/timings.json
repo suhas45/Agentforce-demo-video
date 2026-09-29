@@ -1,0 +1,126 @@
+{
+ "intro": [
+  [
+   0.6,
+   6.419,
+   "C Fashion is a fashion retail company, with stores and distribution centers across the country."
+  ],
+  [
+   6.869,
+   12.785,
+   "But when a customer wants a product that's out of stock in the store, finding it somewhere else can be slow and manual."
+  ],
+  [
+   13.235,
+   20.17,
+   "So, Conscendo built the Store Transfer Agent with Agentforce, right inside Slack, where store teams already work."
+  ],
+  [
+   20.62,
+   28.413,
+   "The agent uses real-time inventory in Salesforce to find stock nearby, and creates transfers and delivery orders in seconds."
+  ]
+ ],
+ "s2s": [
+  [
+   29.213,
+   38.999,
+   "Let's start with a store-to-store transfer. A store associate asks the agent to find a floral maxi dress in size S and blue that's out of stock in their store."
+  ],
+  [
+   39.449,
+   47.316,
+   "Agentforce checks inventory in Salesforce and lists nearby locations that have it, with units, distance, and delivery time."
+  ],
+  [
+   47.766,
+   51.664,
+   "The associate picks the Dallas Distribution Center, the closest option."
+  ],
+  [
+   52.114,
+   62.389,
+   "The agent asks how to fulfill the request: a stock transfer to the store, or warehouse delivery directly to the customer. The associate chooses a stock transfer."
+  ],
+  [
+   62.839,
+   67.479,
+   "The associate asks for two units, reviews the transfer summary, and confirms."
+  ],
+  [
+   67.929,
+   77.129,
+   "The transfer is created in Salesforce: transfer number XFER-0087, with an estimated arrival in one business day."
+  ]
+ ],
+ "s2c": [
+  [
+   77.929,
+   85.05,
+   "Next, a store-to-customer delivery. The associate needs the same floral maxi dress, this time in size M."
+  ],
+  [
+   85.5,
+   90.845,
+   "The agent finds nearby stock, and the associate selects the Atlanta Distribution Center."
+  ],
+  [
+   91.295,
+   96.717,
+   "This time, the associate chooses warehouse delivery directly to the customer, for three units."
+  ],
+  [
+   97.167,
+   100.323,
+   "The agent asks for the customer's email or phone number."
+  ],
+  [
+   100.773,
+   103.838,
+   "It then shows the delivery order details for confirmation."
+  ],
+  [
+   104.288,
+   108.494,
+   "Since this is a new customer, Agentforce asks for the customer's full name."
+  ],
+  [
+   108.944,
+   113.746,
+   "Then it collects the shipping address: street, city, state, postal code, and country."
+  ],
+  [
+   114.196,
+   120.398,
+   "After a final confirmation, the agent creates the new customer and the delivery order in Salesforce."
+  ],
+  [
+   120.848,
+   128.379,
+   "The order is created successfully, with the order number, amount, fulfillment number, and estimated delivery, all right in Slack."
+  ]
+ ],
+ "end": [
+  [
+   129.179,
+   135.919,
+   "For store teams, this means finding stock and fulfilling customer requests in seconds, without ever leaving Slack."
+  ],
+  [
+   136.369,
+   145.736,
+   "For C Fashion, Agentforce turns out-of-stock moments into completed sales, and automates transfers and delivery orders that once took manual effort."
+  ],
+  [
+   146.186,
+   149.726,
+   "The associate simply asks, and the agent takes care of the rest."
+  ],
+  [
+   150.176,
+   155.659,
+   "C Fashion with Agentforce: making store transfers simple, conversational, and fast."
+  ]
+ ],
+ "total": 157.859
+}

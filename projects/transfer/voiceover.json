@@ -1,0 +1,33 @@
+{
+ "voice": "af_heart", "speed": 1.0,
+ "gap_line": 0.45, "gap_section": 0.8, "lead": 0.6, "tail": 2.2,
+ "sections": [
+  {"id": "intro", "lines": [
+   ["C Fashion is a fashion retail company, with stores and distribution centers across the country.", "C Fashion is a fashion retail company, with stores and distribution centers across the country."],
+   ["But when a customer wants a product that's out of stock in the store, finding it somewhere else can be slow and manual.", "But when a customer wants a product that's out of stock in the store, finding it somewhere else can be slow and manual."],
+   ["So, Conscendo built the Store Transfer Agent with Agentforce, right inside Slack, where store teams already work.", "So, Conscendo built the Store Transfer Agent with Agentforce, right inside Slack, where store teams already work."],
+   ["The agent uses real-time inventory in Salesforce to find stock nearby, and creates transfers and delivery orders in seconds.", "The agent uses real-time inventory in Salesforce to find stock nearby, and creates transfers and delivery orders in seconds."]]},
+  {"id": "s2s", "lines": [
+   ["Let's start with a store-to-store transfer. A store associate asks the agent to find a floral maxi dress, in size S and blue, that's out of stock in their store.", "Let's start with a store-to-store transfer. A store associate asks the agent to find a floral maxi dress in size S and blue that's out of stock in their store."],
+   ["Agentforce checks inventory in Salesforce, and lists nearby locations that have it, with units, distance, and delivery time.", "Agentforce checks inventory in Salesforce and lists nearby locations that have it, with units, distance, and delivery time."],
+   ["The associate picks the Dallas Distribution Center, the closest option.", "The associate picks the Dallas Distribution Center, the closest option."],
+   ["The agent asks how to fulfill the request: a stock transfer to the store, or warehouse delivery directly to the customer. The associate chooses a stock transfer.", "The agent asks how to fulfill the request: a stock transfer to the store, or warehouse delivery directly to the customer. The associate chooses a stock transfer."],
+   ["The associate asks for two units, reviews the transfer summary, and confirms.", "The associate asks for two units, reviews the transfer summary, and confirms."],
+   ["The transfer is created in Salesforce, transfer number X F E R, zero zero eight seven, with an estimated arrival in one business day.", "The transfer is created in Salesforce: transfer number XFER-0087, with an estimated arrival in one business day."]]},
+  {"id": "s2c", "lines": [
+   ["Next, a store-to-customer delivery. The associate needs the same floral maxi dress, this time in size M.", "Next, a store-to-customer delivery. The associate needs the same floral maxi dress, this time in size M."],
+   ["The agent finds nearby stock, and the associate selects the Atlanta Distribution Center.", "The agent finds nearby stock, and the associate selects the Atlanta Distribution Center."],
+   ["This time, the associate chooses warehouse delivery directly to the customer, for three units.", "This time, the associate chooses warehouse delivery directly to the customer, for three units."],
+   ["The agent asks for the customer's email or phone number.", "The agent asks for the customer's email or phone number."],
+   ["It then shows the delivery order details for confirmation.", "It then shows the delivery order details for confirmation."],
+   ["Since this is a new customer, Agentforce asks for the customer's full name.", "Since this is a new customer, Agentforce asks for the customer's full name."],
+   ["Then it collects the shipping address: street, city, state, postal code, and country.", "Then it collects the shipping address: street, city, state, postal code, and country."],
+   ["After a final confirmation, the agent creates the new customer and the delivery order in Salesforce.", "After a final confirmation, the agent creates the new customer and the delivery order in Salesforce."],
+   ["The order is created successfully, with the order number, amount, fulfillment number, and estimated delivery, all right in Slack.", "The order is created successfully, with the order number, amount, fulfillment number, and estimated delivery, all right in Slack."]]},
+  {"id": "end", "lines": [
+   ["For store teams, this means finding stock and fulfilling customer requests in seconds, without ever leaving Slack.", ""],
+   ["For C Fashion, Agentforce turns out-of-stock moments into completed sales, and automates transfers and delivery orders that once took manual effort.", ""],
+   ["The associate simply asks, and the agent takes care of the rest.", ""],
+   ["C Fashion with Agentforce: making store transfers simple, conversational, and fast.", ""]]}
+ ]
+}

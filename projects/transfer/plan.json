@@ -1,0 +1,15 @@
+{
+ "output": "CFashion_Agentforce_Store_Transfer_Demo.mp4",
+ "xfade": 0.5,
+ "lead": {"s2s": 0.4, "s2c": 0.4, "end": 1.8},
+ "intro": {"html": "video/transfer_intro.html", "authored": [0.2, 5.0, 10.6, 16.4], "authored_end": 22.0},
+ "end": {"html": "video/transfer_end.html", "authored": [3.2, 11.7, 21.8, 27.0], "authored_end": 33.5},
+ "recordings": {
+  "s2s": {"label": "Slack · Store Transfer Agent · Store-to-store", "src": "recordings/transfer/store_to_store.mp4",
+          "pieces": [[[0, 5, 1]], [[5, 10, 1]], [[10, 19, 1]], [[19, 28, 1]], [[28, 40, 1]], [[40, 54.5, 1]]]},
+  "s2c": {"label": "Slack · Store Transfer Agent · Store-to-customer", "src": "recordings/transfer/Store-to-Customer.mp4",
+          "pieces": [[[0, 5, 1]], [[5, 15, 1]], [[15, 33, 1]], [[33, 52, 1]], [[52, 62, 1]], [[62, 66, 0.35], [82, 92, 0.65]],
+                     [[92, 106, 1]], [[106, 115, 1]], [[115, 129.2, 1]]]}
+ },
+ "order": ["intro", "s2s", "s2c", "end"]
+}

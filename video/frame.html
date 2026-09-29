@@ -27,7 +27,8 @@ body.subsOnly .bg,body.subsOnly .brand,body.subsOnly .tag,body.subsOnly .win{dis
 <div class="win"></div>
 <div class="subs"><div class="sub" id="sub"></div></div>
 <script>
-window.show = (label, sub, subsOnly) => {
+window.show = (label, sub, subsOnly, win) => {
+  if (win) Object.assign(document.querySelector('.win').style, { left: win[0] + 'px', top: win[1] + 'px', width: (win[2] - win[0]) + 'px', height: (win[3] - win[1]) + 'px' });
   document.getElementById('label').textContent = label || '';
   const s = document.getElementById('sub'); s.textContent = sub || ''; s.style.display = sub ? '' : 'none';
   document.body.classList.toggle('subsOnly', !!subsOnly);

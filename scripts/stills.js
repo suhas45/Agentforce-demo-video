@@ -11,7 +11,7 @@ const P = JSON.parse(fs.readFileSync(plan));
   await p.goto('file://' + path.resolve('video/frame.html'));
   await p.waitForFunction('window.ready');
   for (const [i, s] of P.sections.entries()) {
-    await p.evaluate(a => show(a, '', false), s.label);
+    await p.evaluate(s => show(s.label, '', false, s.win), s);
     await p.screenshot({ path: `${dir}/frame_${i}.png` });
   }
   for (const [id, text] of P.subs) {

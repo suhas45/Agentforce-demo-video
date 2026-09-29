@@ -1,20 +1,29 @@
 """Assemble the full demo from audio/timings.json (see scripts/voice.py) and plan.json:
 intro (HTML) -> framed screen recordings retimed line-by-line to the voiceover -> end (HTML),
 joined with crossfades, plus the voiceover and a soft music bed.
-Usage: FFMPEG=... python3 scripts/build.py"""
-import json, os, subprocess
+Usage: FFMPEG=... python3 scripts/build.py <project dir>"""
+import json, os, re, subprocess, sys
 from PIL import Image, ImageDraw
 
 FF = os.environ.get("FFMPEG", "ffmpeg")
-P = json.load(open("plan.json"))
-T = json.load(open("audio/timings.json"))
-B, FPS, X = "build", 30, P["xfade"]
-WIN = (100, 130, 1820, 920)
+D = sys.argv[1].rstrip("/")
+P = json.load(open(f"{D}/plan.json"))
+T = json.load(open(f"{D}/audio/timings.json"))
+B, FPS, X = f"build/{os.path.basename(D)}", 30, P["xfade"]
 os.makedirs(B, exist_ok=True)
 
 
 def ff(*args):
     subprocess.run([FF, "-y", "-loglevel", "error", *args], check=True)
+
+
+def window(src):
+    """Recording window on the 1920x1080 frame: max 1720x790, fitted to the clip's aspect, centered."""
+    info = subprocess.run([FF, "-i", src], capture_output=True, text=True).stderr
+    w, h = map(int, re.search(r"Video: .*?, (\d{3,5})x(\d{3,5})", info).groups())
+    ww = min(1720, round(790 * w / h / 2) * 2)
+    x = (1920 - ww) // 2
+    return (x, 130, x + ww, 920)
 
 
 # section start times on the master timeline
@@ -38,6 +47,7 @@ def html_section(s):
 
 def rec_section(s, idx):
     cfg, lines = P["recordings"][s], T[s]
+    WIN = window(cfg["src"])
     t0 = start[s]
     bounds = [t0] + [l[0] for l in lines[1:]] + [t0 + dur[s]]
     chains, labels = [], []
@@ -69,14 +79,14 @@ def rec_section(s, idx):
 
 # stills: frames + subtitles for recording sections
 recs = [s for s in order if s in P["recordings"]]
-stills = {"sections": [{"label": P["recordings"][s]["label"]} for s in recs],
+stills = {"sections": [{"label": P["recordings"][s]["label"], "win": window(P["recordings"][s]["src"])} for s in recs],
           "subs": [[f"{s}_{n}", l[2]] for s in recs for n, l in enumerate(T[s])]}
 json.dump(stills, open(f"{B}/stills.json", "w"))
 subprocess.run(["node", "scripts/stills.js", f"{B}/stills.json", B], check=True)
 for i, _ in enumerate(recs):
     im = Image.open(f"{B}/frame_{i}.png").convert("RGBA")
     m = Image.new("L", im.size, 255)
-    ImageDraw.Draw(m).rounded_rectangle(WIN, 22, fill=0)
+    ImageDraw.Draw(m).rounded_rectangle(stills["sections"][i]["win"], 22, fill=0)
     im.putalpha(m)
     im.save(f"{B}/hole_{i}.png")
 
@@ -96,9 +106,9 @@ ff(*ins, "-filter_complex", ";".join(fc), "-map", f"[{last}]", "-r", str(FPS),
 tot = T["total"]
 pad = "0.03*(sin(2*PI*220*t)+sin(2*PI*277.18*t)+sin(2*PI*329.63*t)+0.6*sin(2*PI*110*t))*(0.75+0.25*sin(2*PI*0.1*t))"
 ff("-f", "lavfi", "-i", f"aevalsrc={pad}:s=24000:d={tot:.3f}", "-c:a", "pcm_s16le", f"{B}/pad.wav")
-ff("-i", "audio/voiceover.wav", "-i", f"{B}/pad.wav", "-filter_complex",
+ff("-i", f"{D}/audio/voiceover.wav", "-i", f"{B}/pad.wav", "-filter_complex",
    f"[1]lowpass=f=800,afade=t=in:d=2,afade=t=out:st={tot - 3:.2f}:d=3,volume=0.35[m];[0][m]amix=inputs=2:normalize=0:duration=longest[a]",
    "-map", "[a]", "-ar", "48000", "-c:a", "pcm_s16le", f"{B}/mix.wav")
 ff("-i", f"{B}/video.mp4", "-i", f"{B}/mix.wav", "-map", "0:v", "-map", "1:a", "-c:v", "copy",
-   "-c:a", "aac", "-b:a", "192k", "-t", f"{tot:.3f}", "-movflags", "+faststart", "CFashion_Agentforce_Retail_Demo.mp4")
+   "-c:a", "aac", "-b:a", "192k", "-t", f"{tot:.3f}", "-movflags", "+faststart", f"{D}/{P['output']}")
 print("done", {s: round(start[s], 2) for s in order}, "total", tot)

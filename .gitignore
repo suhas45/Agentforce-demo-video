@@ -3,3 +3,4 @@ out/
 build/
 recordings/
 build.log
+build_*.log

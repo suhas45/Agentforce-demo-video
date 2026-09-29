@@ -1,16 +1,20 @@
-# C Fashion × Agentforce — Product Exchange Agent demo video
+# C Fashion × Agentforce — demo videos
 
-- `CFashion_Agentforce_Retail_Demo.mp4` — full demo (2:20, 1920×1080): intro → Salesforce data → site login → agent chat → outcome/end card, aligned to the recorded voiceover with subtitles.
-- `CFashion_Agentforce_Product_Exchange.mp4` — standalone end segment (TTS voiceover).
+| Project | Video |
+|---|---|
+| Product Exchange & Return agent (web chat) | `projects/exchange/CFashion_Agentforce_Retail_Demo.mp4` |
+| Store Transfer agent (Slack) | `projects/transfer/CFashion_Agentforce_Store_Transfer_Demo.mp4` |
 
-## Rebuild the full demo
-Put the recordings in `recordings/` (`salesforcedata.mp4`, `siteloginagent.mp4`, `agentchat.mp4`), then:
+Each project folder has:
+- `voiceover.json` — narration script (one voice, even pacing) + subtitle text, per section.
+- `plan.json` — section order, intro/end HTML, and which recording piece `[srcStart, srcEnd, weight]` plays under each narration line.
+
+## Rebuild
+Put the screen recordings in `recordings/` (paths as in each `plan.json`), then:
 ```sh
 npm install && pip install pillow imageio-ffmpeg kokoro-onnx soundfile
-python3 scripts/voice.py <kokoro model dir>   # voiceover.json -> audio/voiceover.wav + audio/timings.json
 export FFMPEG=$(python3 -c "import imageio_ffmpeg;print(imageio_ffmpeg.get_ffmpeg_exe())")
-python3 scripts/build.py                      # -> CFashion_Agentforce_Retail_Demo.mp4
+python3 scripts/voice.py projects/transfer <kokoro model dir>   # -> projects/transfer/audio/
+python3 scripts/build.py projects/transfer                      # -> projects/transfer/<output>.mp4
 ```
-- `voiceover.json`: narration script (one voice, even pacing) + subtitle text.
-- `plan.json`: which recording piece plays under each narration line; crossfade length.
-- `video/intro.html`, `video/end.html`: animated scenes (retimed to the narration automatically); `video/frame.html`: recording frame + subtitle style.
+Scenes: `video/<project>_intro.html`, `video/<project>_end.html` (auto-retimed to the narration); `video/frame.html` styles the recording frame and subtitles.

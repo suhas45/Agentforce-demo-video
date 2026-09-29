@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Store Transfer Intro</title>
+<link rel="stylesheet" href="common.css">
+<style>
+.center{position:absolute;inset:140px 80px 170px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.bigTitle{font-size:96px;font-weight:800;letter-spacing:-3px;line-height:1.05}
+.bigTitle .g,.h2 .g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cap{font-size:32px;color:var(--muted);margin-top:22px;font-weight:500}
+
+/* scene A: store */
+.shop{display:flex;gap:30px;margin-top:56px}
+.prod{width:250px;background:#fff;border:1px solid var(--line);border-radius:24px;padding:18px;box-shadow:0 14px 40px #0B1F3A12;text-align:left}
+.pimg{height:220px;border-radius:16px;display:grid;place-items:center;font-size:88px}
+.prod b{display:block;font-size:21px;margin-top:14px}
+.prod span{font-size:18px;color:var(--muted)}
+.cartb{margin-top:12px;font-size:16px;font-weight:700;color:#fff;background:var(--navy);border-radius:10px;padding:9px 12px;text-align:center}
+
+/* scene B: complicated */
+.mess{position:relative;width:1100px;height:420px;margin-top:40px}
+.bad{position:absolute;display:flex;align-items:center;gap:14px;background:#fff;border:1px solid #F3C2C9;border-radius:18px;padding:16px 22px;font-size:24px;font-weight:600;box-shadow:0 10px 30px #BA052210;color:#8E1B2E}
+.bad i{font-style:normal;font-size:30px}
+.knot{position:absolute;inset:0;margin:auto;width:160px;height:160px;border-radius:50%;background:#FDE8EB;display:grid;place-items:center;font-size:74px;border:3px dashed #E88A97}
+
+/* scene C: solution */
+.combo{display:flex;align-items:center;gap:40px;margin-top:60px}
+.tile{width:330px;height:220px;border-radius:30px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 50px #0B1F3A14;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.tile b{font-size:34px}
+.tile span{font-size:19px;color:var(--muted)}
+.cloud{width:120px;height:78px;border-radius:40px;background:var(--sky);position:relative}
+.cloud:before{content:"";position:absolute;width:64px;height:64px;border-radius:50%;background:var(--sky);left:18px;top:-28px}
+.cloud:after{content:"";position:absolute;width:48px;height:48px;border-radius:50%;background:var(--sky);left:62px;top:-16px}
+.plus{font-size:64px;font-weight:300;color:#9AA8BD}
+.pills{display:flex;gap:22px;margin-top:48px}
+.pill2{font-size:26px;font-weight:700;padding:14px 30px;border-radius:50px;background:#fff;border:1px solid var(--line);box-shadow:0 8px 24px #0B1F3A10}
+.by{font-size:24px;color:var(--muted);font-weight:600;letter-spacing:4px;text-transform:uppercase}
+.by b{color:var(--navy)}
+
+/* scene D: hub */
+.hub{position:relative;width:1300px;height:560px;margin-top:10px}
+.core{position:absolute;left:50%;top:50%;width:300px;height:300px;margin:-150px 0 0 -150px;border-radius:50%;background:linear-gradient(135deg,#0176D3,#032D60);color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;box-shadow:0 30px 90px #0176D350}
+.core b{font-size:34px}.core span{font-size:20px;color:#BFE0FF}
+.core .cloud{transform:scale(.8);background:#fff}.core .cloud:before,.core .cloud:after{background:#fff}
+.sat{position:absolute;width:300px;margin-left:-150px;text-align:left;white-space:nowrap;margin-top:-38px;background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px;font-size:24px;font-weight:700;display:flex;align-items:center;gap:12px;box-shadow:0 10px 30px #0B1F3A12}
+.sat i{font-style:normal;font-size:28px}
+.links{position:absolute;inset:0}
+.links line{stroke:#0176D3;stroke-width:3;stroke-dasharray:8 8;opacity:.45}
+.lock{position:absolute;left:0;right:0;margin:auto;width:fit-content;bottom:-72px;display:flex;align-items:center;gap:10px;font-size:22px;font-weight:700;color:var(--ok);background:#E6F4EA;padding:10px 22px;border-radius:40px}
+
+.slack{width:92px;height:92px;display:grid;grid-template-columns:1fr 1fr;gap:8px;transform:rotate(-8deg)}
+.slack i{border-radius:14px}
+.locs{display:grid;grid-template-columns:repeat(3,360px);gap:24px;margin-top:50px}
+.loc{background:#fff;border:1px solid var(--line);border-radius:22px;padding:22px 24px;box-shadow:0 12px 34px #0B1F3A12;text-align:left;display:flex;gap:16px;align-items:center}
+.loc i{font-style:normal;font-size:40px}
+.loc b{display:block;font-size:24px;white-space:nowrap}.loc span{font-size:18px;color:var(--muted)}
+.oos{display:flex;gap:26px;align-items:center;background:#fff;border:2px solid #F3C2C9;border-radius:26px;padding:22px 30px;box-shadow:0 14px 40px #BA052214;margin-top:40px}
+.oos .pimg{width:120px;height:120px;border-radius:18px;background:#E3EEFB;display:grid;place-items:center;font-size:66px}
+.oos b{font-size:30px;display:block}.oos span{font-size:22px;color:var(--muted)}
+.badge0{margin-left:20px;font-size:24px;font-weight:800;color:#BA0522;background:#FDE8EB;border-radius:40px;padding:10px 22px}
+</style>
+</head>
+<body>
+<div class="bg"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="grid"></div></div>
+<svg width="0" height="0" style="position:absolute"><defs>
+<symbol id="spark" viewBox="0 0 24 24"><path fill="currentColor" d="M12 1.5l2.3 6.2 6.2 2.3-6.2 2.3L12 18.5l-2.3-6.2L3.5 10l6.2-2.3zM19 15l1 2.6 2.5 1-2.5 1-1 2.6-1-2.6-2.5-1 2.5-1z"/></symbol>
+</defs></svg>
+<div class="brand fade" style="--d:.2s">
+  <div class="logo">C</div><span>C Fashion</span><span class="x">×</span>
+  <span class="af"><svg class="spark"><use href="#spark"/></svg>Agentforce</span>
+</div>
+<div class="tag fade" style="--d:.4s">Store Transfer Agent</div>
+
+<!-- A: 0 - 4.8 stores & DCs -->
+<section class="scene" style="--s:0s;--e:4.7s">
+  <div class="center">
+    <div class="bigTitle up" style="--d:.2s">C Fashion — <span class="g">fashion retail</span></div>
+    <div class="cap up" style="--d:.6s">Stores and distribution centers across the country</div>
+    <div class="locs">
+      <div class="loc up" style="--d:1.1s"><i>🏬</i><div><b>Galleria Dallas</b><span>Store</span></div></div>
+      <div class="loc up" style="--d:1.4s"><i>🏬</i><div><b>Highland Park Village</b><span>Store</span></div></div>
+      <div class="loc up" style="--d:1.7s"><i>🏭</i><div><b>Dallas DC</b><span>Distribution center</span></div></div>
+      <div class="loc up" style="--d:2.0s"><i>🏭</i><div><b>Atlanta DC</b><span>Distribution center</span></div></div>
+      <div class="loc up" style="--d:2.3s"><i>🏭</i><div><b>Chicago DC</b><span>Distribution center</span></div></div>
+      <div class="loc up" style="--d:2.6s"><i>🏭</i><div><b>Los Angeles DC</b><span>Distribution center</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- B: 4.8 - 10.4 out of stock -->
+<section class="scene" style="--s:4.8s;--e:10.3s">
+  <div class="center">
+    <div class="bigTitle up" style="--d:5.0s">Out of stock <span class="g">in store</span>…</div>
+    <div class="oos pop" style="--d:5.6s"><div class="pimg">👗</div><div style="text-align:left"><b>Floral Maxi Dress</b><span>Size S · Blue</span></div><div class="badge0">0 in stock</div></div>
+    <div class="mess" style="height:260px;margin-top:30px">
+      <div class="bad pop" style="--d:7.0s;left:30px;top:10px"><i>📞</i>Calling other stores</div>
+      <div class="bad pop" style="--d:7.4s;right:30px;top:0"><i>📊</i>Checking spreadsheets</div>
+      <div class="bad pop" style="--d:7.8s;left:120px;bottom:10px"><i>📝</i>Manual transfer requests</div>
+      <div class="bad pop" style="--d:8.2s;right:110px;bottom:20px"><i>🚶</i>Customer walks away</div>
+    </div>
+  </div>
+</section>
+
+<!-- C: 10.4 - 16.2 solution in Slack -->
+<section class="scene" style="--s:10.4s;--e:16.1s">
+  <div class="center">
+    <div class="by up" style="--d:10.6s">Built by <b>Conscendo</b></div>
+    <div class="bigTitle up" style="--d:11.0s;margin-top:18px;font-size:84px">The <span class="g">Store Transfer Agent</span></div>
+    <div class="combo">
+      <div class="tile pop" style="--d:11.8s"><svg style="width:84px;height:84px;color:var(--violet)"><use href="#spark"/></svg><b>Agentforce</b><span>AI agent that takes action</span></div>
+      <div class="plus fade" style="--d:12.4s">+</div>
+      <div class="tile pop" style="--d:12.8s"><div class="slack"><i style="background:#36C5F0"></i><i style="background:#2EB67D"></i><i style="background:#E01E5A"></i><i style="background:#ECB22E"></i></div><b>Slack</b><span>Where store teams already work</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- D: 16.2 - end real-time inventory -->
+<section class="scene" style="--s:16.2s;--e:99s">
+  <div class="center" style="justify-content:flex-start">
+    <div class="h2 up" style="--d:16.4s;margin-top:0;font-size:60px">Real-time inventory in <span class="g">Salesforce</span></div>
+    <div class="hub">
+      <svg class="links" viewBox="0 0 1300 560">
+        <line x1="650" y1="280" x2="230" y2="90" class="fade" style="--d:17.2s"/><line x1="650" y1="280" x2="230" y2="280" class="fade" style="--d:17.2s"/><line x1="650" y1="280" x2="230" y2="470" class="fade" style="--d:17.2s"/>
+        <line x1="650" y1="280" x2="1070" y2="90" class="fade" style="--d:17.2s"/><line x1="650" y1="280" x2="1070" y2="280" class="fade" style="--d:17.2s"/><line x1="650" y1="280" x2="1070" y2="470" class="fade" style="--d:17.2s"/>
+      </svg>
+      <div class="core pop" style="--d:16.8s"><div class="cloud"></div><b>Salesforce</b><span>Inventory &amp; orders</span></div>
+      <div class="sat pop" style="--d:17.6s;left:230px;top:90px"><i>🔎</i>Find stock nearby</div>
+      <div class="sat pop" style="--d:18.0s;left:230px;top:280px"><i>📦</i>SKU inventory</div>
+      <div class="sat pop" style="--d:18.4s;left:230px;top:470px"><i>📍</i>Locations</div>
+      <div class="sat pop" style="--d:19.6s;left:1070px;top:90px"><i>🔄</i>Store transfers</div>
+      <div class="sat pop" style="--d:20.0s;left:1070px;top:280px"><i>🚚</i>Delivery orders</div>
+      <div class="sat pop" style="--d:20.4s;left:1070px;top:470px"><i>👤</i>Customers</div>
+      <div class="lock up" style="--d:20.8s">⚡ Done in seconds</div>
+    </div>
+  </div>
+</section>
+
+<div class="subs">
+  <div class="sub" style="--s:0.2s;--e:4.6s">C Fashion is a fashion retail company, with stores and distribution centers across the country.</div>
+  <div class="sub" style="--s:5.0s;--e:10.2s">But when a customer wants a product that's out of stock in the store, finding it somewhere else can be slow and manual.</div>
+  <div class="sub" style="--s:10.6s;--e:16.0s">So, Conscendo built the Store Transfer Agent with Agentforce, right inside Slack, where store teams already work.</div>
+  <div class="sub" style="--s:16.4s;--e:21.8s">The agent uses real-time inventory in Salesforce to find stock nearby, and creates transfers and delivery orders in seconds.</div>
+</div>
+<script>
+window.remap = t => { const A = window.ANCH; if (!A) return t;
+  let i = 0; while (i < A.length - 2 && t > A[i + 1][0]) i++;
+  const [r0, a0] = A[i], [r1, a1] = A[i + 1];
+  return t > r1 ? a1 + (t - r1) : a0 + (t - r0) * (a1 - a0) / (r1 - r0); };
+window.setT = function(t){ t = remap(t); document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000;}); };
+document.fonts.ready.then(()=>{window.ready=true;});
+</script>
+</body>
+</html>
