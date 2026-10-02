@@ -1,0 +1,170 @@
+{
+ "src": "projects/comedy/source.mp3",
+ "voices": {
+  "manager": {
+   "formant": 0.84,
+   "pitch": 0.46
+  },
+  "arjun": {
+   "formant": 0.9,
+   "pitch": 0.62
+  }
+ },
+ "lines": [
+  {
+   "spk": "manager",
+   "src": [
+    0.05,
+    4.02
+   ],
+   "sub": "Arjun, just change that button colour a little."
+  },
+  {
+   "spk": "manager",
+   "src": [
+    4.28,
+    7.25
+   ],
+   "sub": "Five-minute job. It goes to production today."
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    8.25,
+    9.68
+   ],
+   "sub": "Five minutes..."
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    10.26,
+    12.63
+   ],
+   "sub": "I heard the same five minutes last month."
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    13.46,
+    16.88
+   ],
+   "sub": "Sir, it's Friday. Shall we look at it on Monday?"
+  },
+  {
+   "spk": "manager",
+   "tts": "orey_arjun",
+   "sub": "Orey, Arjun!"
+  },
+  {
+   "spk": "manager",
+   "src": [
+    17.75,
+    21.91
+   ],
+   "sub": "I promised the client. You handle it, my flight is getting late."
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    23.0,
+    24.63
+   ],
+   "sub": "Deployment started.",
+   "pre": 1.8
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    25.75,
+    28.37
+   ],
+   "sub": "All test cases passed. Except one."
+  },
+  {
+   "spk": "manager",
+   "tts": "arey",
+   "sub": "Arey!"
+  },
+  {
+   "spk": "manager",
+   "src": [
+    29.05,
+    29.81
+   ],
+   "sub": "Which one?"
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    30.36,
+    31.51
+   ],
+   "sub": "Login page."
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    32.47,
+    35.86
+   ],
+   "sub": "The button colour changed. The login is gone."
+  },
+  {
+   "spk": "manager",
+   "phone": true,
+   "src": [
+    36.89,
+    38.96
+   ],
+   "sub": "Deployment went fine, no?"
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    39.83,
+    40.66
+   ],
+   "sub": "Yes sir."
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    40.85,
+    42.03
+   ],
+   "sub": "Just one small issue."
+  },
+  {
+   "spk": "manager",
+   "phone": true,
+   "tts": "orey",
+   "sub": "Orey..."
+  },
+  {
+   "spk": "manager",
+   "phone": true,
+   "src": [
+    43.09,
+    44.63
+   ],
+   "sub": "Nothing serious, right?"
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    45.3,
+    46.55
+   ],
+   "sub": "No sir, it's small."
+  },
+  {
+   "spk": "arjun",
+   "src": [
+    46.87,
+    48.67
+   ],
+   "sub": "Nobody can log in."
+  }
+ ]
+}
