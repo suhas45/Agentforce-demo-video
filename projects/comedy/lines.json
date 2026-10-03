@@ -2,12 +2,12 @@
  "src": "projects/comedy/source.mp3",
  "voices": {
   "manager": {
-   "formant": 0.84,
-   "pitch": 0.46
+   "formant": 1,
+   "pitch": 1
   },
   "arjun": {
-   "formant": 0.9,
-   "pitch": 0.62
+   "formant": 1,
+   "pitch": 1
   }
  },
  "lines": [
@@ -53,11 +53,6 @@
   },
   {
    "spk": "manager",
-   "tts": "orey_arjun",
-   "sub": "Orey, Arjun!"
-  },
-  {
-   "spk": "manager",
    "src": [
     17.75,
     21.91
@@ -80,11 +75,6 @@
     28.37
    ],
    "sub": "All test cases passed. Except one."
-  },
-  {
-   "spk": "manager",
-   "tts": "arey",
-   "sub": "Arey!"
   },
   {
    "spk": "manager",
@@ -134,12 +124,6 @@
     42.03
    ],
    "sub": "Just one small issue."
-  },
-  {
-   "spk": "manager",
-   "phone": true,
-   "tts": "orey",
-   "sub": "Orey..."
   },
   {
    "spk": "manager",

@@ -26,6 +26,8 @@ def af(x, chain):
 
 def revoice(x, v):
     f, p = v["formant"], v["pitch"]
+    if f == 1 and p == 1:
+        return x
     return af(x, f"asetrate={SR * f:.0f},aresample={SR},atempo={1 / f:.4f},"
                  f"rubberband=pitch={p / f:.4f}:formant=preserved")
 
@@ -49,16 +51,17 @@ for ln in L["lines"]:
         x, _ = librosa.effects.trim(x, top_db=35)
         ln["_tts"] = True
     if ln.get("phone"):
-        x = af(x, "highpass=f=320,lowpass=f=3300,acompressor=threshold=0.1:ratio=4,volume=1.6")
+        x = af(x, "highpass=f=200,lowpass=f=5000")
     clips.append(x)
 
-# match Kokoro lines to the re-voiced manager's pitch and loudness
-mgr = np.concatenate([c for c, l in zip(clips, L["lines"]) if l["spk"] == "manager" and "src" in l and not l.get("phone")])
-mf, mr = f0(mgr), np.sqrt(np.mean(mgr ** 2))
-for i, ln in enumerate(L["lines"]):
-    if ln.get("_tts"):
-        c = af(clips[i], f"rubberband=pitch={mf / f0(clips[i]):.4f}:formant=preserved")
-        clips[i] = c * (mr / max(np.sqrt(np.mean(c ** 2)), 1e-6))
+# match Kokoro lines to the manager's pitch and loudness
+if any(l.get("_tts") for l in L["lines"]):
+    mgr = np.concatenate([c for c, l in zip(clips, L["lines"]) if l["spk"] == "manager" and "src" in l and not l.get("phone")])
+    mf, mr = f0(mgr), np.sqrt(np.mean(mgr ** 2))
+    for i, ln in enumerate(L["lines"]):
+        if ln.get("_tts"):
+            c = af(clips[i], f"rubberband=pitch={mf / f0(clips[i]):.4f}:formant=preserved")
+            clips[i] = c * (mr / max(np.sqrt(np.mean(c ** 2)), 1e-6))
 
 # lay out: keep the source pauses, give the inserted words their own breath
 out, t, prev_end, T = [np.zeros(int(LEAD * SR), np.float32)], LEAD, None, []
@@ -91,5 +94,5 @@ for l in T:
     for f in range(int(l["start"] * FPS), min(int(l["end"] * FPS) + 1, n, len(rms))):
         env[l["spk"]][f] = round(float(rms[f]), 3)
 json.dump({"total": round(len(y) / SR, 3), "lines": T, "env": env}, open(f"{A}/timings.json", "w"))
-print(f"{len(y) / SR:.2f}s, manager f0 {mf:.0f}Hz")
+print(f"{len(y) / SR:.2f}s")
 for l in T: print(l["start"], l["end"], l["spk"], l["sub"])
