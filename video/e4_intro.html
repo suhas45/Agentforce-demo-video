@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>E4-1 Intro</title>
+<link rel="stylesheet" href="conscendo.css">
+<style>
+.tcard{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;padding-left:160px}
+.tcard img{height:72px;align-self:flex-start;margin-bottom:70px}
+.tcard .eyebrow{font-size:26px}
+.tcard h1{font:800 104px/1.04 var(--h);color:#fff;margin-top:18px;letter-spacing:-2px}
+.tcard h2{font:500 46px var(--h);color:var(--orange);margin-top:18px}
+.tcard .bar{width:180px;height:8px;background:var(--orange);margin-top:44px}
+
+.inbox{display:flex;align-items:center;gap:60px;margin-top:70px}
+.mail{font:700 46px var(--h);color:var(--purple);border:3px solid var(--purple);border-radius:6px;padding:30px 40px;background:#fff}
+.mail small{display:block;font:600 18px var(--b);letter-spacing:3px;text-transform:uppercase;color:var(--orange);margin-bottom:10px}
+.links{width:120px;height:300px}
+.links line{stroke:var(--purple);stroke-width:3}
+.people{display:flex;flex-direction:column;gap:22px}
+.person{font:600 30px var(--b);color:var(--black);background:#fff;border-left:8px solid var(--orange);padding:18px 28px;border-radius:4px;min-width:420px;border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+.person span{display:block;font:400 20px var(--b);color:var(--grey);margin-top:4px}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:64px}
+.pcard{background:#fff;border:1px solid var(--line);border-top:8px solid var(--purple);border-radius:6px;padding:36px 40px}
+.pcard .n{font:800 64px var(--h);color:var(--orange)}
+.pcard b{display:block;font:700 38px/1.2 var(--h);color:var(--purple);margin-top:8px}
+.pcard p{font:400 26px/1.4 var(--b);color:var(--grey);margin-top:14px}
+.tagX{display:inline-block;margin-top:18px;font:700 20px var(--b);letter-spacing:2px;text-transform:uppercase;color:#fff;background:var(--black);padding:8px 14px;border-radius:4px}
+
+.fields{display:flex;gap:40px;margin-top:60px}
+.field{flex:1;background:#fff;border:1px solid var(--line);border-radius:6px;padding:32px 36px}
+.field .obj{font:700 20px var(--b);letter-spacing:3px;text-transform:uppercase;color:var(--orange)}
+.field .row{display:flex;align-items:center;gap:20px;margin-top:18px;font:700 36px var(--h);color:var(--purple)}
+.cb{width:44px;height:44px;border:3px solid var(--purple);border-radius:4px;position:relative;flex:none;background:var(--purple)}
+.cb:after{content:"";position:absolute;left:12px;top:3px;width:12px;height:24px;border:solid #fff;border-width:0 5px 5px 0;transform:rotate(45deg)}
+.field .api{font:400 22px var(--b);color:var(--grey);margin-top:12px}
+.help{margin-top:34px;font:400 26px var(--b);color:var(--grey);border-left:6px solid var(--orange);padding:6px 0 6px 22px}
+.map{margin-top:18px;font:600 24px var(--b);color:var(--purple)}
+
+.cols{display:grid;grid-template-columns:1fr 1fr;gap:50px;margin-top:60px}
+.col{border:1px solid var(--line);border-radius:6px;padding:32px 36px;background:#fff}
+.col.on{border:3px solid var(--purple)}
+.col h3{font:700 24px var(--b);letter-spacing:3px;text-transform:uppercase;color:var(--grey)}
+.col.on h3{color:var(--orange)}
+.chips{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.chip{font:700 28px var(--h);padding:14px 22px;border-radius:4px;background:var(--lav);color:var(--purple)}
+.chip.x{background:var(--grey-bg);color:#9A9A9A;text-decoration:line-through}
+.chip.g{background:var(--grey-bg);color:var(--black)}
+.col p{font:400 24px/1.4 var(--b);color:var(--grey);margin-top:20px}
+</style>
+</head>
+<body>
+<div class="bgWhite"><div class="arc"></div><div class="arc2"></div><div class="flags"></div></div>
+<img class="hdrLogo fade" style="--d:3.4s" src="brand/logo-primary.png">
+<div class="chipTag fade" style="--d:3.5s"><img src="brand/flag-mark.svg">E4-1 · Shared / Generic Email</div>
+
+<!-- T: title card 0 - 3.3 -->
+<section class="scene purple" style="--s:0s;--e:3.1s;animation:none,sOut .5s ease-in 3.1s forwards;opacity:1">
+  <div class="pat"></div>
+  <div class="tcard">
+    <img class="fade" style="--d:.2s" src="brand/logo-reversed-transparent.png">
+    <div class="eyebrow up" style="--d:.5s">Story E4-1 · L-01</div>
+    <h1 class="up" style="--d:.7s">Shared / Generic Email</h1>
+    <h2 class="up" style="--d:1.0s">on Lead and Contact</h2>
+    <div class="bar wipe" style="--d:1.3s"></div>
+  </div>
+</section>
+
+<!-- A: 3.4 - 9.3 -->
+<section class="scene" style="--s:3.4s;--e:9.2s">
+  <div class="panel">
+    <div class="eyebrow up" style="--d:3.6s">The situation</div>
+    <div class="title up" style="--d:3.8s">One inbox. <span class="o">Several people.</span></div>
+    <div class="inbox">
+      <div class="mail up" style="--d:4.6s"><small>Shared email</small>QC@difgen.com</div>
+      <svg class="links fade" style="--d:5.2s" viewBox="0 0 120 300"><line x1="0" y1="150" x2="120" y2="40"/><line x1="0" y1="150" x2="120" y2="150"/><line x1="0" y1="150" x2="120" y2="260"/></svg>
+      <div class="people">
+        <div class="person up" style="--d:5.4s">Person 1<span>Own mobile number</span></div>
+        <div class="person up" style="--d:5.8s">Person 2<span>Own mobile number</span></div>
+        <div class="person up" style="--d:6.2s">Person 3<span>Own mobile number</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B: 9.4 - 16.3 -->
+<section class="scene" style="--s:9.4s;--e:16.2s">
+  <div class="panel">
+    <div class="eyebrow up" style="--d:9.6s">Today</div>
+    <div class="title up" style="--d:9.8s">Matching on email <span class="o">gets it wrong</span></div>
+    <div class="cards">
+      <div class="pcard up" style="--d:10.4s"><div class="n">01</div><b>Second contact is blocked</b><p>The contact duplicate rule sees the same email and stops the save.</p><span class="tagX">Blocked as duplicate</span></div>
+      <div class="pcard up" style="--d:13.2s"><div class="n">02</div><b>Lead links to the wrong person</b><p>Conversion matches on email, so the lead can attach to someone else's contact.</p><span class="tagX">Wrong contact</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- C: 16.4 - 20.8 -->
+<section class="scene" style="--s:16.4s;--e:20.7s">
+  <div class="panel">
+    <div class="eyebrow up" style="--d:16.6s">The change</div>
+    <div class="title up" style="--d:16.8s">A new <span class="o">Shared / Generic Email</span> flag</div>
+    <div class="fields">
+      <div class="field up" style="--d:17.4s"><div class="obj">Lead</div><div class="row"><div class="cb"></div>Shared / Generic Email</div><div class="api">Shared_Generic_Email__c · Checkbox</div></div>
+      <div class="field up" style="--d:17.8s"><div class="obj">Contact</div><div class="row"><div class="cb"></div>Shared / Generic Email</div><div class="api">Shared_Generic_Email__c · Checkbox</div></div>
+    </div>
+    <div class="help up" style="--d:18.4s">“Tick if several people at this customer use this same email address.”</div>
+    <div class="map up" style="--d:19.0s">Mapped from Lead to Contact on conversion</div>
+  </div>
+</section>
+
+<!-- D: 21.0 - end -->
+<section class="scene" style="--s:21.0s;--e:99s">
+  <div class="panel">
+    <div class="eyebrow up" style="--d:21.2s">How matching works</div>
+    <div class="title up" style="--d:21.4s">Flag on: match by <span class="o">mobile and name</span></div>
+    <div class="cols">
+      <div class="col up" style="--d:22.2s"><h3>Flag off · as today</h3><div class="chips"><span class="chip g">Email</span></div><p>Duplicate rules and conversion keep matching on email, exactly as today.</p></div>
+      <div class="col on up" style="--d:23.2s"><h3>Flag on</h3><div class="chips"><span class="chip x">Email</span><span class="chip">Account</span><span class="chip">Mobile</span><span class="chip">Last name</span><span class="chip">First name</span></div><p>Duplicate checks, lead entry and conversion ignore the email.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="subs">
+  <div class="sub" style="--s:3.6s;--e:9.2s">Some customers share one email address between several people, like a QC team that uses a single inbox.</div>
+  <div class="sub" style="--s:9.6s;--e:16.2s">Today, Salesforce blocks the second contact as a duplicate. And lead conversion can link a lead to the wrong person, because it matches on email.</div>
+  <div class="sub" style="--s:16.6s;--e:20.7s">So, Conscendo added a Shared / Generic Email flag on Lead and Contact.</div>
+  <div class="sub" style="--s:21.2s;--e:26.8s">When it's ticked, duplicate checks and conversion ignore the email, and match people by mobile number and name instead.</div>
+</div>
+
+<script>
+window.remap = t => { const A = window.ANCH; if (!A) return t;
+  let i = 0; while (i < A.length - 2 && t > A[i + 1][0]) i++;
+  const [r0, a0] = A[i], [r1, a1] = A[i + 1];
+  return t > r1 ? a1 + (t - r1) : a0 + (t - r0) * (a1 - a0) / (r1 - r0); };
+window.setT = function(t){ t = remap(t); document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000;}); };
+Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(()=>{}))]).then(()=>{window.ready=true;});
+</script>
+</body>
+</html>

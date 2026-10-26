@@ -1,0 +1,48 @@
+@font-face{font-family:"Encode Sans";font-weight:400;src:url(../node_modules/@fontsource/encode-sans/files/encode-sans-latin-400-normal.woff2)}
+@font-face{font-family:"Encode Sans";font-weight:500;src:url(../node_modules/@fontsource/encode-sans/files/encode-sans-latin-500-normal.woff2)}
+@font-face{font-family:"Encode Sans";font-weight:700;src:url(../node_modules/@fontsource/encode-sans/files/encode-sans-latin-700-normal.woff2)}
+@font-face{font-family:"Encode Sans";font-weight:800;src:url(../node_modules/@fontsource/encode-sans/files/encode-sans-latin-800-normal.woff2)}
+:root{
+  --purple:#5A2483; --purple-deep:#4E1F73; --orange:#F0801C; --white:#FFFFFF; --black:#171717;
+  --grey-bg:#F2F2F2; --grey:#3A3A3A; --lav:#EEE8F3; --peach:#FCF1E8; --line:#EEE8F3;
+  --h:"Encode Sans",Arial,sans-serif; --b:"Switzer",Arial,"Liberation Sans",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden}
+body{font-family:var(--b);color:var(--grey);background:var(--white);position:relative}
+
+/* backgrounds */
+.bgWhite{position:absolute;inset:0;background:var(--white)}
+.bgWhite .arc{position:absolute;width:1400px;height:1400px;border-radius:50%;background:var(--grey-bg);right:-760px;top:-520px}
+.bgWhite .arc2{position:absolute;width:900px;height:900px;border-radius:50%;background:var(--lav);left:-560px;bottom:-620px}
+.bgWhite .flags{position:absolute;inset:0;background:url(brand/flag-pattern-white.png) 0 0/400px 400px;opacity:.18}
+.purple{background:var(--purple)}
+.purple .pat{position:absolute;inset:-400px;background:url(brand/flag-pattern-purple.png) 0 0/400px 400px;animation:slide 40s linear 0s both}
+@keyframes slide{to{transform:translate(400px,-400px)}}
+
+/* header */
+.hdrLogo{position:absolute;left:80px;top:52px;height:44px;z-index:5}
+.chipTag{position:absolute;right:80px;top:54px;z-index:5;display:flex;align-items:center;gap:12px;font:600 20px var(--b);color:var(--purple);border:1.5px solid var(--purple);padding:9px 18px;border-radius:4px;background:var(--white)}
+.chipTag img{width:14px;height:14px}
+
+/* scene system */
+.scene{position:absolute;inset:0;opacity:0;animation:sIn .6s ease-out var(--s) both,sOut .5s ease-in var(--e) forwards}
+@keyframes sIn{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:none}}
+@keyframes sOut{from{opacity:1}to{opacity:0}}
+.up{animation:up .6s cubic-bezier(.2,.8,.2,1) var(--d) both}
+@keyframes up{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.fade{animation:fade .5s ease var(--d) both}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+.wipe{animation:wipe .6s ease var(--d) both;transform-origin:left}
+@keyframes wipe{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+
+/* type */
+.eyebrow{font:700 22px var(--b);letter-spacing:3px;text-transform:uppercase;color:var(--orange)}
+.title{font:700 76px/1.08 var(--h);color:var(--purple);letter-spacing:-1px}
+.title .o{color:var(--orange)}
+.lead{font:400 30px/1.45 var(--b);color:var(--grey);margin-top:22px;max-width:820px}
+.panel{position:absolute;inset:150px 110px 170px}
+
+/* subtitles */
+.subs{position:absolute;left:0;right:0;bottom:44px;display:flex;justify-content:center;z-index:20}
+.sub{position:absolute;bottom:0;max-width:1600px;text-align:center;font:500 30px/1.35 var(--b);color:#fff;background:rgba(0,0,0,.6);padding:12px 26px;border-radius:4px;opacity:0;animation:fade .3s ease var(--s) both,sOut .3s ease var(--e) forwards}

@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>E4-1 End</title>
+<link rel="stylesheet" href="conscendo.css">
+<style>
+.rows{display:flex;flex-direction:column;gap:26px;margin-top:56px}
+.rowc{display:grid;grid-template-columns:110px 1fr 420px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:6px;padding:26px 36px}
+.rowc .n{font:800 60px var(--h);color:var(--orange)}
+.rowc b{font:700 34px/1.2 var(--h);color:var(--purple)}
+.rowc span{display:block;font:400 22px var(--b);color:var(--grey);margin-top:6px}
+.res{justify-self:end;font:700 26px var(--b);padding:14px 22px;border-radius:4px;color:#fff;background:var(--purple)}
+.res.blk{background:var(--black)}
+.res.same{background:var(--grey-bg);color:var(--black)}
+.endc{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.endc img{height:110px}
+.endc .tag{font:700 48px var(--h);color:#fff;margin-top:60px}
+.endc .tag i{font-style:normal;color:var(--orange)}
+.endc .url{font:500 28px var(--b);color:#fff;margin-top:22px;letter-spacing:1px}
+.endc .bar{width:140px;height:6px;background:var(--orange);margin-top:40px}
+</style>
+</head>
+<body>
+<div class="bgWhite"><div class="arc"></div><div class="arc2"></div><div class="flags"></div></div>
+
+<!-- R: outcomes 0 - 16.6 -->
+<section class="scene" style="--s:0s;--e:16.4s">
+  <img class="hdrLogo" src="brand/logo-primary.png">
+  <div class="chipTag"><img src="brand/flag-mark.svg">E4-1 · Shared / Generic Email</div>
+    <div class="panel">
+    <div class="eyebrow up" style="--d:.2s">The result</div>
+    <div class="title up" style="--d:.4s">What the flag <span class="o">changes</span></div>
+    <div class="rows">
+      <div class="rowc up" style="--d:1.0s"><div class="n">01</div><div><b>Shared email, different mobile or name</b><span>Same account, flag ticked</span></div><div class="res">Both contacts save</div></div>
+      <div class="rowc up" style="--d:7.5s"><div class="n">02</div><div><b>Same mobile and same name</b><span>Same account, flag ticked</span></div><div class="res blk">Blocked as duplicate</div></div>
+      <div class="rowc up" style="--d:12.5s"><div class="n">03</div><div><b>Flag not ticked</b><span>Leads and contacts</span></div><div class="res same">Works exactly as today</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- end card 16.6 - end -->
+<section class="scene purple" style="--s:16.6s;--e:99s">
+  <div class="pat"></div>
+  <div class="endc">
+    <img class="fade" style="--d:16.9s" src="brand/logo-reversed-transparent.png">
+    <div class="tag up" style="--d:17.4s">Igniting <i>Growth</i></div>
+    <div class="bar wipe" style="--d:17.8s"></div>
+    <div class="url up" style="--d:18.0s">www.conscendo.io</div>
+  </div>
+</section>
+
+<div class="subs">
+  <div class="sub" style="--s:1.0s;--e:7.2s">With the flag ticked, contacts on the same account can share an email, as long as their mobile or name is different.</div>
+  <div class="sub" style="--s:7.5s;--e:12.2s">Real duplicates are still blocked: the same mobile and the same name, on the same account.</div>
+  <div class="sub" style="--s:12.5s;--e:16.3s">Leads and contacts without the flag work exactly as before.</div>
+</div>
+
+<script>
+window.remap = t => { const A = window.ANCH; if (!A) return t;
+  let i = 0; while (i < A.length - 2 && t > A[i + 1][0]) i++;
+  const [r0, a0] = A[i], [r1, a1] = A[i + 1];
+  return t > r1 ? a1 + (t - r1) : a0 + (t - r0) * (a1 - a0) / (r1 - r0); };
+window.setT = function(t){ t = remap(t); document.getAnimations().forEach(a=>{a.pause();a.currentTime=t*1000;}); };
+Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(()=>{}))]).then(()=>{window.ready=true;});
+</script>
+</body>
+</html>

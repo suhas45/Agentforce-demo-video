@@ -17,13 +17,17 @@ def ff(*args):
     subprocess.run([FF, "-y", "-loglevel", "error", *args], check=True)
 
 
-def window(src):
-    """Recording window on the 1920x1080 frame: max 1720x790, fitted to the clip's aspect, centered."""
-    info = subprocess.run([FF, "-i", src], capture_output=True, text=True).stderr
-    w, h = map(int, re.search(r"Video: .*?, (\d{3,5})x(\d{3,5})", info).groups())
+def window(src, crop=None):
+    """Recording window on the 1920x1080 frame: max 1720x790, fitted to the clip's (cropped) aspect, centered."""
+    if crop:
+        w, h = crop[0], crop[1]
+    else:
+        info = subprocess.run([FF, "-i", src], capture_output=True, text=True).stderr
+        w, h = map(int, re.search(r"Video: .*?, (\d{3,5})x(\d{3,5})", info).groups())
     ww = min(1720, round(790 * w / h / 2) * 2)
-    x = (1920 - ww) // 2
-    return (x, 130, x + ww, 920)
+    hh = min(790, round(ww * h / w / 2) * 2)
+    x, y = (1920 - ww) // 2, 130 + (790 - hh) // 2
+    return (x, y, x + ww, y + hh)
 
 
 # section start times on the master timeline
@@ -47,7 +51,8 @@ def html_section(s):
 
 def rec_section(s, idx):
     cfg, lines = P["recordings"][s], T[s]
-    WIN = window(cfg["src"])
+    WIN = window(cfg["src"], cfg.get("crop"))
+    crop = "crop={}:{}:{}:{},".format(*cfg["crop"]) if cfg.get("crop") else ""
     t0 = start[s]
     bounds = [t0] + [l[0] for l in lines[1:]] + [t0 + dur[s]]
     chains, labels = [], []
@@ -62,7 +67,7 @@ def rec_section(s, idx):
                           f"tpad=stop_mode=clone:stop_duration={tgt + 0.2:.3f},trim=0:{tgt:.4f},setpts=PTS-STARTPTS[p{j}]")
             labels.append(f"[p{j}]")
     w, h = WIN[2] - WIN[0], WIN[3] - WIN[1]
-    fc = ";".join(chains) + f";{''.join(labels)}concat=n={len(labels)}:v=1:a=0,scale={w}:{h}:force_original_aspect_ratio=decrease," \
+    fc = ";".join(chains) + f";{''.join(labels)}concat=n={len(labels)}:v=1:a=0,{crop}scale={w}:{h}:force_original_aspect_ratio=decrease," \
         f"pad={w}:{h}:-1:-1:color=0x0B1F3A,setsar=1[rec];[1:v][rec]overlay={WIN[0]}:{WIN[1]}[x];[x][2:v]overlay=0:0[y0]"
     d = f"{dur[s]:.3f}"
     inputs = ["-i", cfg["src"], "-loop", "1", "-t", d, "-i", f"{B}/frame_{idx}.png", "-loop", "1", "-t", d, "-i", f"{B}/hole_{idx}.png"]
@@ -79,7 +84,7 @@ def rec_section(s, idx):
 
 # stills: frames + subtitles for recording sections
 recs = [s for s in order if s in P["recordings"]]
-stills = {"sections": [{"label": P["recordings"][s]["label"], "win": window(P["recordings"][s]["src"])} for s in recs],
+stills = {"frame": P.get("frame", "video/frame.html"), "sections": [{"label": P["recordings"][s]["label"], "win": window(P["recordings"][s]["src"], P["recordings"][s].get("crop"))} for s in recs],
           "subs": [[f"{s}_{n}", l[2]] for s in recs for n, l in enumerate(T[s])]}
 json.dump(stills, open(f"{B}/stills.json", "w"))
 subprocess.run(["node", "scripts/stills.js", f"{B}/stills.json", B], check=True)

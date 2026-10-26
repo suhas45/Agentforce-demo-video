@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Conscendo Recording Frame</title>
+<link rel="stylesheet" href="conscendo.css">
+<style>
+body.subsOnly{background:transparent}
+body.subsOnly .bgWhite,body.subsOnly .hdrLogo,body.subsOnly .chipTag,body.subsOnly .win{display:none}
+.win{position:absolute;left:100px;top:130px;width:1720px;height:790px;border-radius:6px;background:var(--black);outline:2px solid var(--purple);outline-offset:6px}
+.sub{opacity:1;animation:none}
+.subs{bottom:30px}
+</style>
+</head>
+<body>
+<div class="bgWhite"><div class="arc"></div><div class="arc2"></div><div class="flags"></div></div>
+<img class="hdrLogo" src="brand/logo-primary.png">
+<div class="chipTag"><img src="brand/flag-mark.svg"><span id="label"></span></div>
+<div class="win"></div>
+<div class="subs"><div class="sub" id="sub"></div></div>
+<script>
+window.show = (label, sub, subsOnly, win) => {
+  if (win) Object.assign(document.querySelector('.win').style, { left: win[0] + 'px', top: win[1] + 'px', width: (win[2] - win[0]) + 'px', height: (win[3] - win[1]) + 'px' });
+  document.getElementById('label').textContent = label || '';
+  const s = document.getElementById('sub'); s.textContent = sub || ''; s.style.display = sub ? '' : 'none';
+  document.body.classList.toggle('subsOnly', !!subsOnly);
+};
+Promise.all([document.fonts.ready, ...[...document.images].map(i => i.decode().catch(()=>{}))]).then(()=>{window.ready=true;});
+</script>
+</body>
+</html>

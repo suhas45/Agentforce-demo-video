@@ -1,0 +1,74 @@
+{
+ "intro": [
+  [
+   3.4,
+   10.351,
+   "Some customers share one email address between several people, like a QC team that uses a single inbox."
+  ],
+  [
+   10.801,
+   19.545,
+   "Today, Salesforce blocks the second contact as a duplicate. And lead conversion can link a lead to the wrong person, because it matches on email."
+  ],
+  [
+   19.995,
+   24.576,
+   "So, Conscendo added a Shared / Generic Email flag on Lead and Contact."
+  ],
+  [
+   25.026,
+   31.693,
+   "When it's ticked, duplicate checks and conversion ignore the email, and match people by mobile number and name instead."
+  ]
+ ],
+ "rec": [
+  [
+   32.493,
+   37.267,
+   "Here's a lead, Mr. Sai Suhas, with the Shared / Generic Email checkbox ticked."
+  ],
+  [
+   37.717,
+   46.845,
+   "The user converts the lead. Since the email is shared, conversion looks for an existing contact on the account by mobile and name, never by email."
+  ],
+  [
+   47.295,
+   54.503,
+   "No contact on the account matches this mobile and name, so a new contact is created, and the lead converts successfully."
+  ],
+  [
+   54.953,
+   57.977,
+   "The new opportunity is created on the Conscendo account."
+  ],
+  [
+   58.427,
+   68.834,
+   "On the account, the new contact Sai Suhas now appears. Two other contacts here share the same email address, and both were saved without being blocked as duplicates."
+  ]
+ ],
+ "end": [
+  [
+   69.634,
+   76.406,
+   "With the flag ticked, contacts on the same account can share an email, as long as their mobile or name is different."
+  ],
+  [
+   76.856,
+   82.116,
+   "Real duplicates are still blocked: the same mobile and the same name, on the same account."
+  ],
+  [
+   82.566,
+   86.421,
+   "Leads and contacts without the flag work exactly as before."
+  ],
+  [
+   86.871,
+   88.85,
+   "Conscendo. Igniting Growth."
+  ]
+ ],
+ "total": 91.85
+}

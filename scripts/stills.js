@@ -8,7 +8,7 @@ const P = JSON.parse(fs.readFileSync(plan));
 (async () => {
   const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
   const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
-  await p.goto('file://' + path.resolve('video/frame.html'));
+  await p.goto('file://' + path.resolve(P.frame || 'video/frame.html'));
   await p.waitForFunction('window.ready');
   for (const [i, s] of P.sections.entries()) {
     await p.evaluate(s => show(s.label, '', false, s.win), s);

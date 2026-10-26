@@ -1,0 +1,83 @@
+{
+ "output": "E4-1_Shared_Generic_Email.mp4",
+ "frame": "video/frame_conscendo.html",
+ "xfade": 0.5,
+ "lead": {
+  "rec": 0.4,
+  "end": 0.8
+ },
+ "intro": {
+  "html": "video/e4_intro.html",
+  "authored": [
+   3.6,
+   9.5,
+   16.5,
+   21.0
+  ],
+  "authored_end": 27.0
+ },
+ "end": {
+  "html": "video/e4_end.html",
+  "authored": [
+   1.0,
+   7.5,
+   12.5,
+   17.0
+  ],
+  "authored_end": 19.0
+ },
+ "recordings": {
+  "rec": {
+   "label": "E4-1 \u00b7 Lead conversion with shared email",
+   "src": "recordings/e4/E4-1.mp4",
+   "pieces": [
+    [
+     [
+      0,
+      4,
+      1
+     ]
+    ],
+    [
+     [
+      4,
+      9,
+      1
+     ]
+    ],
+    [
+     [
+      9,
+      12,
+      1
+     ]
+    ],
+    [
+     [
+      12,
+      19,
+      1
+     ]
+    ],
+    [
+     [
+      19,
+      27.0,
+      1
+     ]
+    ]
+   ],
+   "crop": [
+    1918,
+    792,
+    0,
+    214
+   ]
+  }
+ },
+ "order": [
+  "intro",
+  "rec",
+  "end"
+ ]
+}

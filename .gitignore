@@ -1,6 +1,6 @@
+build.log
+build/
+build_*.log
 node_modules/
 out/
-build/
 recordings/
-build.log
-build_*.log
