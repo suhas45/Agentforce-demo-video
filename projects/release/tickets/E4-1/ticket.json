@@ -1,0 +1,155 @@
+{
+ "id": "E4-1",
+ "title": "Shared / Generic Email",
+ "area": "Lead & Contact",
+ "recording": "recordings/e4/E4-1.mp4",
+ "lines": [
+  {
+   "beat": "Problem",
+   "head": "One email, several people",
+   "sub": "Duplicates were blocked, and conversion matched on email.",
+   "text": "E4-1. Some customers share one email across several people. Salesforce blocked them as duplicates, and conversion could pick the wrong contact.",
+   "say": "E four one. Some customers share one email across several people. Salesforce blocked them as duplicates, and conversion could pick the wrong contact.",
+   "pieces": [
+    [
+     0,
+     1.6,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "Change",
+   "head": "Match on mobile and name",
+   "sub": "New Shared / Generic Email checkbox on Lead and Contact.",
+   "text": "Now, a Shared / Generic Email checkbox on Lead and Contact matches people by mobile and name instead.",
+   "say": "Now, a Shared Generic Email checkbox on Lead and Contact matches people by mobile and name instead.",
+   "pieces": [
+    [
+     1.6,
+     3.4,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "Demo",
+   "head": "Flagged lead converts",
+   "sub": "No mobile and name match on the account, so a new contact is created.",
+   "text": "Here, a flagged lead converts. No contact matches its mobile and name, so a new one is created.",
+   "pieces": [
+    [
+     3.4,
+     12,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "Result",
+   "head": "Shared emails save side by side",
+   "sub": "Same mobile and same name is still blocked.",
+   "text": "Contacts sharing one email now save side by side, while the same mobile and name is still blocked.",
+   "pieces": [
+    [
+     12,
+     13.5,
+     0.2
+    ],
+    [
+     19.5,
+     27,
+     0.8
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0.0,
+   "x": 0,
+   "y": 214,
+   "w": 1200
+  },
+  {
+   "src": 1.5,
+   "x": 0,
+   "y": 214,
+   "w": 1200
+  },
+  {
+   "src": 2.0,
+   "x": 0,
+   "y": 420,
+   "w": 720
+  },
+  {
+   "src": 3.3,
+   "x": 0,
+   "y": 420,
+   "w": 720
+  },
+  {
+   "src": 4.6,
+   "x": 0,
+   "y": 214,
+   "w": 1200
+  },
+  {
+   "src": 5.6,
+   "x": 380,
+   "y": 240,
+   "w": 1160
+  },
+  {
+   "src": 12.0,
+   "x": 380,
+   "y": 240,
+   "w": 1160
+  },
+  {
+   "src": 12.3,
+   "x": 0,
+   "y": 214,
+   "w": 1584
+  },
+  {
+   "src": 19.5,
+   "x": 0,
+   "y": 214,
+   "w": 1584
+  },
+  {
+   "src": 20.3,
+   "x": 930,
+   "y": 400,
+   "w": 980
+  }
+ ],
+ "focus": [
+  {
+   "src0": 2.3,
+   "src1": 3.35,
+   "x": 60,
+   "y": 548,
+   "w": 210,
+   "h": 62
+  },
+  {
+   "src0": 10.6,
+   "src1": 12.0,
+   "x": 630,
+   "y": 490,
+   "w": 660,
+   "h": 175
+  },
+  {
+   "src0": 21.0,
+   "src1": 27,
+   "x": 965,
+   "y": 655,
+   "w": 910,
+   "h": 85
+  }
+ ]
+}

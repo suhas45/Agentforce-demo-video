@@ -1,0 +1,10 @@
+{
+ "title": "Release walkthrough",
+ "subtitle": "Inkarp Sales · Salesforce",
+ "total": 10,
+ "tickets": ["E4-1"],
+ "voice": "af_heart", "speed": 1.0,
+ "intro": {"text": "Here's a quick walkthrough of this release, one ticket at a time."},
+ "end": {"text": "That's the release. Thanks for watching."},
+ "output": "Release_Walkthrough.mp4"
+}

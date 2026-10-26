@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Release Walkthrough</title>
+<style>
+@font-face{font-family:Inter;font-weight:400;src:url(../../node_modules/@fontsource/inter/files/inter-latin-400-normal.woff2)}
+@font-face{font-family:Inter;font-weight:500;src:url(../../node_modules/@fontsource/inter/files/inter-latin-500-normal.woff2)}
+@font-face{font-family:Inter;font-weight:600;src:url(../../node_modules/@fontsource/inter/files/inter-latin-600-normal.woff2)}
+@font-face{font-family:Inter;font-weight:700;src:url(../../node_modules/@fontsource/inter/files/inter-latin-700-normal.woff2)}
+@font-face{font-family:Inter;font-weight:800;src:url(../../node_modules/@fontsource/inter/files/inter-latin-800-normal.woff2)}
+:root{--p:#2350D9;--pd:#1D44BC;--a:#FF7A45;--ink:#11151C;--g1:#F4F6FA;--g2:#E3E8F2;--g3:#8A93A6;--body:#4A5468}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1920px;height:1080px;overflow:hidden;background:var(--g1);font-family:Inter,sans-serif;color:var(--ink)}
+.abs{position:absolute}
+.pat{position:absolute;left:-200px;top:-200px;width:2320px;height:1480px}
+.chip{display:inline-block;font:700 26px Inter;color:#fff;background:var(--p);padding:8px 16px;border-radius:6px;letter-spacing:.02em}
+#hdr{left:80px;top:56px;display:flex;align-items:center;gap:20px}
+#hdrTitle{font:700 30px Inter;letter-spacing:-.01em}
+#hdrR{right:80px;top:62px;font:600 24px Inter;color:var(--g3);display:flex;gap:18px;align-items:center}
+#hdrR b{color:var(--ink)}
+#left{left:80px;top:200px;width:520px}
+.beat{position:absolute;left:0;top:0;width:520px}
+.beat .eb{font:700 24px Inter;letter-spacing:.14em;text-transform:uppercase;color:var(--p);display:flex;align-items:center;gap:12px}
+.beat .eb i{width:18px;height:18px;border-top:4px solid var(--a);border-right:4px solid var(--a);display:inline-block}
+.beat .hd{font:800 58px/1.08 Inter;letter-spacing:-.02em;margin-top:18px}
+.beat .sb{font:400 30px/1.4 Inter;color:var(--body);margin-top:22px}
+#steps{left:80px;top:690px;display:flex;flex-direction:column;gap:12px}
+.step{display:flex;align-items:center;gap:14px;font:600 26px Inter;color:var(--g3)}
+.step s{width:12px;height:12px;border-radius:3px;background:var(--g2);text-decoration:none;display:inline-block}
+#win{left:660px;top:170px;width:1200px;height:636px;background:#fff;border:1px solid var(--g2);border-radius:8px;overflow:hidden}
+#chrome{height:36px;border-bottom:1px solid var(--g2);display:flex;align-items:center;gap:8px;padding-left:16px;background:#fff}
+#chrome i{width:11px;height:11px;border-radius:50%;background:var(--g2)}
+#chrome span{margin-left:14px;font:500 17px Inter;color:var(--g3)}
+#vp{position:absolute;left:0;top:36px;width:1200px;height:600px;overflow:hidden;background:#fff}
+#rec{position:absolute;left:0;top:0;transform-origin:0 0;width:1918px;height:1006px}
+#focus{position:absolute;border:4px solid var(--a);border-radius:6px;box-shadow:0 0 0 2400px rgba(17,21,28,.32);opacity:0}
+#caps{left:0;right:0;bottom:48px;display:flex;justify-content:center}
+.cap{position:absolute;bottom:0;max-width:1640px;text-align:center;font:500 30px/1.35 Inter;color:#fff;background:rgba(0,0,0,.6);padding:12px 26px;border-radius:6px;opacity:0}
+#card{left:0;top:0;width:1920px;height:1080px;background:var(--p);overflow:hidden}
+#card .pat{opacity:1}
+.cardIn{position:absolute;left:160px;top:0;height:1080px;display:flex;flex-direction:column;justify-content:center}
+.cnt{font:700 30px Inter;color:#fff;opacity:.75;letter-spacing:.08em}
+.cid{font:800 180px/1 Inter;color:#fff;letter-spacing:-.03em;margin-top:18px}
+.ctitle{font:700 72px/1.1 Inter;color:#fff;letter-spacing:-.02em;margin-top:22px}
+.carea{display:inline-block;font:700 26px Inter;color:var(--ink);background:var(--a);padding:9px 18px;border-radius:6px;margin-top:34px;align-self:flex-start}
+.list{display:flex;gap:14px;flex-wrap:wrap;margin-top:40px;max-width:1500px}
+.list span{font:700 26px Inter;color:#fff;border:2px solid rgba(255,255,255,.5);padding:8px 16px;border-radius:6px}
+</style>
+</head>
+<body>
+<script>
+// ---------- helpers (deterministic, driven only by seek(t)) ----------
+const E = {
+  out:x=>1-Math.pow(1-x,4), inn:x=>x*x*x*x, io:x=>x<.5?8*x*x*x*x:1-Math.pow(-2*x+2,4)/2,
+  cam:x=>{x=Math.min(1,Math.max(0,x));return x<.5?4*x*x*x:1-Math.pow(-2*x+2,3)/2},
+  spring:x=>1-Math.exp(-7*x)*Math.cos(10*x)
+};
+const cl=(v,a=0,b=1)=>Math.min(b,Math.max(a,v));
+const prog=(t,t0,d)=>cl((t-t0)/d);
+function mk(parent,cls,html,css){const e=document.createElement('div');if(cls)e.className=cls;if(html!=null)e.innerHTML=html;if(css)e.style.cssText=css;(parent||document.body).appendChild(e);return e}
+function st(e,{x=0,y=0,s=1,o=1,b=0}){e.style.transform=`translate(${x}px,${y}px) scale(${s})`;e.style.opacity=o;e.style.filter=b>0.05?`blur(${b}px)`:'none'}
+// entrance/exit: opacity + rise + blur
+function inout(e,t,t0,t1,{rise=28,dIn=.6,dOut=.35}={}){
+  const pi=E.out(prog(t,t0,dIn)), po=t1==null?0:E.inn(prog(t,t1,dOut));
+  st(e,{y:rise*(1-pi)-16*po,o:pi*(1-po),b:8*(1-pi)+6*po});
+}
+function pattern(parent,color,op){
+  const svg=`<svg class="pat" xmlns="http://www.w3.org/2000/svg" style="opacity:${op}"><defs><pattern id="pp${color.slice(1)}" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M20 20h22M42 20v22" stroke="${color}" stroke-width="5" fill="none"/><path d="M80 80h22M102 80v22" stroke="${color}" stroke-width="5" fill="none"/></pattern></defs><rect width="100%" height="100%" fill="url(#pp${color.slice(1)})"/></svg>`;
+  const w=mk(parent,'',svg);return w.firstChild;
+}
+const drift=(el,t)=>{const d=(t*14)%120;el.style.transform=`translate(${d}px,${-d}px)`};
+
+let C=null, R={};
+window.init=function(cfg){
+  C=cfg; document.body.innerHTML='';
+  if(C.mode==='chapter') buildChapter(); else buildCard();
+  return Promise.all([document.fonts.ready,...[...document.images].map(i=>i.decode().catch(()=>{}))]).then(()=>true);
+};
+
+// ---------- intro / end card ----------
+function buildCard(){
+  R.card=mk(null,'abs','', 'left:0;top:0;width:1920px;height:1080px;background:var(--p);overflow:hidden');
+  R.pat=pattern(R.card,'#1D44BC',1);
+  const box=mk(R.card,'cardIn');
+  R.items=[mk(box,'cnt',C.eyebrow),mk(box,'cid',C.title,'font-size:130px'),mk(box,'ctitle',C.subtitle,'font-size:52px;font-weight:600;opacity:.92')];
+  if(C.list){const l=mk(box,'list');C.list.forEach(x=>mk(l,'',`<span>${x}</span>`));R.items.push(l)}
+  R.caps=mk(null,'abs','');R.caps.id='caps';
+  R.capEls=(C.lines||[]).map(l=>mk(R.caps,'cap',l.text));
+}
+function seekCard(t){
+  drift(R.pat,t);
+  R.items.forEach((e,i)=>inout(e,t,.25+i*.09,null,{rise:34,dIn:.9}));
+  const fade=C.fadeOut?E.inn(prog(t,C.dur-.6,.6)):0;
+  R.card.style.opacity=1; R.items.forEach(e=>e.style.opacity=parseFloat(e.style.opacity)*(1-fade));
+  (C.lines||[]).forEach((l,i)=>{const e=R.capEls[i];const o=prog(t,l.start-.05,.25)*(1-prog(t,l.end+.15,.25));e.style.opacity=o});
+}
+
+// ---------- ticket chapter ----------
+function buildChapter(){
+  R.pat=pattern(null,'#E3E8F2',1);
+  R.hdr=mk(null,'abs',`<span class="chip">${C.id}</span><span id="hdrTitle">${C.title}</span>`);R.hdr.id='hdr';
+  R.hdrR=mk(null,'abs',`<span>${C.area}</span><span><b>${String(C.index).padStart(2,'0')}</b> / ${String(C.total).padStart(2,'0')}</span>`);R.hdrR.id='hdrR';
+  R.left=mk(null,'abs');R.left.id='left';
+  R.beats=C.lines.map(l=>{const b=mk(R.left,'beat');b._eb=mk(b,'eb',`<i></i>${l.beat}`);b._hd=mk(b,'hd',l.head);b._sb=mk(b,'sb',l.sub);return b});
+  R.steps=mk(null,'abs');R.steps.id='steps';
+  R.stepEls=C.lines.map(l=>mk(R.steps,'step',`<s></s>${l.beat}`));
+  R.win=mk(null,'abs','<div id="chrome"><i></i><i></i><i></i><span>Salesforce</span></div><div id="vp"><img id="rec"><div id="focus"></div></div>');R.win.id='win';
+  R.img=R.win.querySelector('#rec');R.focus=R.win.querySelector('#focus');
+  R.caps=mk(null,'abs');R.caps.id='caps';
+  R.capEls=C.lines.map(l=>mk(R.caps,'cap',l.text));
+  R.card=mk(null,'abs');R.card.id='card';R.cpat=pattern(R.card,'#1D44BC',1);
+  const ci=mk(R.card,'cardIn');
+  R.cItems=[mk(ci,'cnt',`TICKET ${String(C.index).padStart(2,'0')} / ${String(C.total).padStart(2,'0')}`),mk(ci,'cid',C.id),mk(ci,'ctitle',C.title),mk(ci,'carea',C.area)];
+  R.lastSrc='';
+}
+function camAt(t){
+  const K=C.cam; if(t<=K[0].t) return K[0];
+  for(let i=0;i<K.length-1;i++){const a=K[i],b=K[i+1];
+    if(t<b.t){const d=Math.min(1.2,b.t-a.t);const p=E.cam(prog(t,b.t-d,d));return{x:a.x+(b.x-a.x)*p,y:a.y+(b.y-a.y)*p,w:a.w+(b.w-a.w)*p}}}
+  return K[K.length-1];
+}
+async function seekChapter(t){
+  const ce=C.cardEnd;
+  drift(R.pat,t); drift(R.cpat,t);
+  // chapter card, then slide up to reveal the split
+  R.cItems.forEach((e,i)=>inout(e,t,.15+i*.08,null,{rise:40,dIn:.8}));
+  const up=E.io(prog(t,ce-.55,.55)); R.card.style.transform=`translateY(${-1080*up}px)`; R.card.style.display=up>=1?'none':'block';
+  // header + window entrance
+  inout(R.hdr,t,ce-.2,null);inout(R.hdrR,t,ce-.15,null);
+  const wp=E.out(prog(t,ce-.1,.8)); st(R.win,{x:60*(1-wp),o:wp,b:6*(1-wp)});
+  inout(R.steps,t,ce+.1,null);
+  // beats: each enters on its line start, exits as the next one begins
+  C.lines.forEach((l,i)=>{const b=R.beats[i];const nx=C.lines[i+1];const t1=nx?nx.start-.35:null;
+    inout(b._eb,t,l.start-.25,t1);inout(b._hd,t,l.start-.18,t1,{rise:34});inout(b._sb,t,l.start-.08,t1);
+    const act=t>=l.start-.25&&(!nx||t<nx.start-.25); const s=R.stepEls[i];
+    s.style.color=act?'var(--ink)':(t>l.start?'var(--body)':'var(--g3)');
+    s.firstChild.style.background=act?'var(--a)':(t>l.start?'var(--p)':'var(--g2)');
+    const cap=R.capEls[i]; cap.style.opacity=prog(t,l.start-.05,.25)*(1-prog(t,l.end+.15,.25));
+  });
+  // recording frame + camera
+  const fi=cl(Math.floor((t-C.rec.start)*30),0,C.rec.n-1); const src=`${C.rec.dir}/${String(fi+1).padStart(5,'0')}.jpg`;
+  if(src!==R.lastSrc){R.img.src=src;R.lastSrc=src;await R.img.decode().catch(()=>{})}
+  const c=camAt(t); const push=1+.025*((t%8)/8); const s=1200/c.w*push;
+  const dx=8*Math.sin(t*.35), dy=5*Math.cos(t*.27);
+  const ox=-(c.x+c.w/2)*s+600+dx, oy=-(c.y+c.w/4)*s+300+dy;
+  R.img.style.transform=`translate(${ox}px,${oy}px) scale(${s})`;
+  // focus frame on the detail being spoken
+  let fo=0,fr=null;
+  for(const f of C.focus){const o=E.out(prog(t,f.t0,.45))*(1-prog(t,f.t1,.3)); if(o>fo){fo=o;fr=f}}
+  if(fr){const pad=10;R.focus.style.left=(ox+fr.x*s-pad)+'px';R.focus.style.top=(oy+fr.y*s-pad)+'px';
+    R.focus.style.width=(fr.w*s+2*pad)+'px';R.focus.style.height=(fr.h*s+2*pad)+'px';
+    R.focus.style.opacity=fo;R.focus.style.transform=`scale(${1+.06*(1-E.out(prog(t,fr.t0,.45)))})`;}
+  else R.focus.style.opacity=0;
+}
+window.seek=async t=>{ if(C.mode==='chapter') await seekChapter(t); else seekCard(t); };
+</script>
+</body>
+</html>
