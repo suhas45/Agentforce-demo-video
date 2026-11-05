@@ -37,6 +37,8 @@ def tts(text):
 
 def render(cfg, out):
     p = out.replace(".mp4", ".json")
+    if not PREVIEW and os.path.exists(out) and os.path.exists(p) and json.load(open(p)) == json.loads(json.dumps(cfg)):
+        return  # unchanged segment: keep the existing render
     json.dump(cfg, open(p, "w"))
     if PREVIEW:
         ts = ",".join(f"{x:.2f}" for x in cfg.get("preview", [1.0]))

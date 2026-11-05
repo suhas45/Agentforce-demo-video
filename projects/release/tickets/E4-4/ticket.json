@@ -54,8 +54,8 @@
    "say": "And if the lead joins an existing contact, that contact's own open tasks are left as they are.",
    "pieces": [
     [
-     51,
-     61,
+     55.5,
+     62.5,
      1
     ]
    ]
@@ -99,7 +99,7 @@
    "w": 960
   },
   {
-   "src": 51,
+   "src": 55.5,
    "x": 940,
    "y": 420,
    "w": 960
@@ -131,8 +131,8 @@
    "h": 365
   },
   {
-   "src0": 53,
-   "src1": 60.5,
+   "src0": 56.2,
+   "src1": 62.4,
    "x": 990,
    "y": 462,
    "w": 880,
