@@ -1,0 +1,126 @@
+{
+ "id": "E4-6",
+ "title": "Protected accounts on conversion",
+ "area": "Leads",
+ "recording": "recordings/e4/E4-6.mp4",
+ "lines": [
+  {
+   "beat": "Before",
+   "head": "Leads could join hidden accounts",
+   "sub": "Conversion could match an account owned by another team.",
+   "text": "E4-6. A lead could be converted into a customer account that belonged to someone else's territory.",
+   "say": "E four six. A lead could be converted into a customer account that belonged to someone else's territory.",
+   "pieces": [
+    [
+     0,
+     1.6,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "What's new",
+   "head": "Conversion is now blocked",
+   "sub": "A clear message explains who to ask for access.",
+   "text": "Now, if you don't have access to the matching account, conversion is blocked, with a clear message on who to ask.",
+   "say": "Now, if you don't have access to the matching account, conversion is blocked, with a clear message on who to ask.",
+   "pieces": [
+    [
+     1.6,
+     9.4,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "In action",
+   "head": "Owned by another salesperson",
+   "sub": "So this user can't add contacts or opportunities to it.",
+   "text": "Here, the Conscendo account is owned by another salesperson, so this user can't convert into it.",
+   "say": "Here, the Conscendo account is owned by another salesperson, so this user can't convert into it.",
+   "pieces": [
+    [
+     9.6,
+     13.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "What you'll notice",
+   "head": "Department carries over too",
+   "sub": "Once access is shared, conversion works as usual.",
+   "text": "Once the account is shared, conversion works as usual. And a lead's department now carries over to the contact.",
+   "say": "Once the account is shared, conversion works as usual. And a lead's department now carries over to the contact.",
+   "pieces": [
+    [
+     38.4,
+     42.2,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 159,
+   "y": 208,
+   "w": 1600
+  },
+  {
+   "src": 1.6,
+   "x": 159,
+   "y": 208,
+   "w": 1600
+  },
+  {
+   "src": 2.4,
+   "x": 440,
+   "y": 300,
+   "w": 1040
+  },
+  {
+   "src": 9.4,
+   "x": 440,
+   "y": 300,
+   "w": 1040
+  },
+  {
+   "src": 9.6,
+   "x": 380,
+   "y": 250,
+   "w": 1100
+  },
+  {
+   "src": 13.5,
+   "x": 380,
+   "y": 250,
+   "w": 1100
+  },
+  {
+   "src": 38.4,
+   "x": 440,
+   "y": 300,
+   "w": 1040
+  }
+ ],
+ "focus": [
+  {
+   "src0": 3.0,
+   "src1": 9.3,
+   "x": 648,
+   "y": 505,
+   "w": 630,
+   "h": 110
+  },
+  {
+   "src0": 10.6,
+   "src1": 13.5,
+   "x": 780,
+   "y": 510,
+   "w": 330,
+   "h": 65
+  }
+ ]
+}

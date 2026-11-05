@@ -1,0 +1,126 @@
+{
+ "id": "E4-7",
+ "title": "Product Managers reassign owners",
+ "area": "Opportunities",
+ "recording": "recordings/e4/E4-7.mp4",
+ "lines": [
+  {
+   "beat": "Before",
+   "head": "Only admins could reassign",
+   "sub": "Product Managers had to ask an admin to change an owner.",
+   "text": "E4-7. Product Managers often know who should handle an opportunity, but they had to ask an admin to change its owner.",
+   "say": "E four seven. Product Managers often know who should handle an opportunity, but they had to ask an admin to change its owner.",
+   "pieces": [
+    [
+     10,
+     15,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "What's new",
+   "head": "New Change Owner button",
+   "sub": "Product Managers pick the right salesperson themselves.",
+   "text": "Now, Product Managers get a Change Owner button, and pick the new salesperson themselves.",
+   "say": "Now, Product Managers get a Change Owner button, and pick the new salesperson themselves.",
+   "pieces": [
+    [
+     26,
+     39.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "In action",
+   "head": "Owner updated in a few clicks",
+   "sub": "The opportunity now belongs to B. Krishna.",
+   "text": "Here, the opportunity is reassigned to B. Krishna in just a few clicks.",
+   "say": "Here, the opportunity is reassigned to B Krishna in just a few clicks.",
+   "pieces": [
+    [
+     39.5,
+     44,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "What you'll notice",
+   "head": "Everything else stays protected",
+   "sub": "Product Managers still can't edit stage, amount or products.",
+   "text": "Product Managers can change the owner, but they still can't edit anything else on the opportunity.",
+   "say": "Product Managers can change the owner, but they still can't edit anything else on the opportunity.",
+   "pieces": [
+    [
+     16,
+     23.5,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 10,
+   "x": 159,
+   "y": 250,
+   "w": 1600
+  },
+  {
+   "src": 15,
+   "x": 159,
+   "y": 250,
+   "w": 1600
+  },
+  {
+   "src": 26,
+   "x": 380,
+   "y": 330,
+   "w": 1150
+  },
+  {
+   "src": 44,
+   "x": 300,
+   "y": 300,
+   "w": 1000
+  },
+  {
+   "src": 16,
+   "x": 300,
+   "y": 420,
+   "w": 1100
+  },
+  {
+   "src": 39.4,
+   "x": 380,
+   "y": 330,
+   "w": 1150
+  },
+  {
+   "src": 39.6,
+   "x": 300,
+   "y": 300,
+   "w": 1000
+  }
+ ],
+ "focus": [
+  {
+   "src0": 40.5,
+   "src1": 44,
+   "x": 740,
+   "y": 440,
+   "w": 270,
+   "h": 60
+  },
+  {
+   "src0": 21.5,
+   "src1": 23.5,
+   "x": 670,
+   "y": 765,
+   "w": 400,
+   "h": 130
+  }
+ ]
+}

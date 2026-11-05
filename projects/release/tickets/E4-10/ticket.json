@@ -1,0 +1,142 @@
+{
+ "id": "E4-10",
+ "title": "Many Product Managers per principal",
+ "area": "Principal accounts",
+ "recording": "recordings/e4/E4-10.mp4",
+ "lines": [
+  {
+   "beat": "Before",
+   "head": "Only two Product Managers",
+   "sub": "Principals covered by more PMs couldn't record them all.",
+   "text": "E4-10. A principal could only list two Product Managers, even when more people managed it.",
+   "say": "E four ten. A principal could only list two Product Managers, even when more people managed it.",
+   "pieces": [
+    [
+     0,
+     4,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "What's new",
+   "head": "Add as many as you need",
+   "sub": "Mark one as primary. Untick Active at hand-over.",
+   "text": "Now, any number of Product Managers can be added. One is marked as primary, and Active can be unticked when someone hands over.",
+   "say": "Now, any number of Product Managers can be added. One is marked as primary, and Active can be unticked when someone hands over.",
+   "pieces": [
+    [
+     4,
+     17,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "In action",
+   "head": "A third PM, set as primary",
+   "sub": "The primary PM also shows as the Product Owner.",
+   "text": "Here, a third Product Manager is added and set as primary. They also show as the account's Product Owner.",
+   "say": "Here, a third Product Manager is added and set as primary. They also show as the account's Product Owner.",
+   "pieces": [
+    [
+     18.3,
+     23,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "What you'll notice",
+   "head": "Access follows the list",
+   "sub": "Listed PMs see their principal's leads and opportunities.",
+   "text": "Everyone on the list automatically sees the principal's leads and opportunities.",
+   "say": "Everyone on the list automatically sees the principal's leads and opportunities.",
+   "pieces": [
+    [
+     23,
+     28.6,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 900,
+   "y": 360,
+   "w": 1000
+  },
+  {
+   "src": 4,
+   "x": 900,
+   "y": 360,
+   "w": 1000
+  },
+  {
+   "src": 5,
+   "x": 450,
+   "y": 380,
+   "w": 1050
+  },
+  {
+   "src": 17,
+   "x": 450,
+   "y": 380,
+   "w": 1050
+  },
+  {
+   "src": 18.3,
+   "x": 0,
+   "y": 214,
+   "w": 1200
+  },
+  {
+   "src": 20.5,
+   "x": 0,
+   "y": 214,
+   "w": 1200
+  },
+  {
+   "src": 21.8,
+   "x": 900,
+   "y": 330,
+   "w": 1000
+  }
+ ],
+ "focus": [
+  {
+   "src0": 0.8,
+   "src1": 3.9,
+   "x": 960,
+   "y": 500,
+   "w": 910,
+   "h": 110
+  },
+  {
+   "src0": 14,
+   "src1": 16.8,
+   "x": 980,
+   "y": 560,
+   "w": 400,
+   "h": 90
+  },
+  {
+   "src0": 18.8,
+   "src1": 20.6,
+   "x": 70,
+   "y": 585,
+   "w": 1220,
+   "h": 125
+  },
+  {
+   "src0": 22.3,
+   "src1": 28.6,
+   "x": 960,
+   "y": 535,
+   "w": 900,
+   "h": 45
+  }
+ ]
+}

@@ -1,10 +1,21 @@
 {
- "title": "Release walkthrough",
- "subtitle": "Inkarp Sales · Salesforce",
- "total": 10,
- "tickets": ["E4-1"],
- "voice": "af_heart", "speed": 1.0,
- "intro": {"text": "Here's a quick walkthrough of this release, one ticket at a time."},
- "end": {"text": "That's the release. Thanks for watching."},
- "output": "Release_Walkthrough.mp4"
+ "title": "Epic E4",
+ "subtitle": "Leads, contacts and opportunities",
+ "total": 5,
+ "tickets": [
+  "E4-1",
+  "E4-4",
+  "E4-6",
+  "E4-7",
+  "E4-10"
+ ],
+ "voice": "af_heart",
+ "speed": 1.0,
+ "intro": {
+  "text": "Here's what's new for leads, contacts and opportunities. Five improvements, one at a time."
+ },
+ "end": {
+  "text": "That's everything in this update. Thanks for watching."
+ },
+ "output": "Epic_E4_Walkthrough.mp4"
 }

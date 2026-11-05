@@ -1,15 +1,15 @@
 {
  "id": "E4-1",
  "title": "Shared / Generic Email",
- "area": "Lead & Contact",
+ "area": "Leads & Contacts",
  "recording": "recordings/e4/E4-1.mp4",
  "lines": [
   {
-   "beat": "Problem",
-   "head": "One email, several people",
-   "sub": "Duplicates were blocked, and conversion matched on email.",
-   "text": "E4-1. Some customers share one email across several people. Salesforce blocked them as duplicates, and conversion could pick the wrong contact.",
-   "say": "E four one. Some customers share one email across several people. Salesforce blocked them as duplicates, and conversion could pick the wrong contact.",
+   "beat": "Before",
+   "head": "One team email, many people",
+   "sub": "A second person with the same email was blocked as a duplicate.",
+   "text": "E4-1. Many customers use one email for a whole team, like a QC inbox. Adding a second person from that team was blocked as a duplicate.",
+   "say": "E four one. Many customers use one email for a whole team, like a QC inbox. Adding a second person from that team was blocked as a duplicate.",
    "pieces": [
     [
      0,
@@ -19,11 +19,11 @@
    ]
   },
   {
-   "beat": "Change",
-   "head": "Match on mobile and name",
-   "sub": "New Shared / Generic Email checkbox on Lead and Contact.",
-   "text": "Now, a Shared / Generic Email checkbox on Lead and Contact matches people by mobile and name instead.",
-   "say": "Now, a Shared Generic Email checkbox on Lead and Contact matches people by mobile and name instead.",
+   "beat": "What's new",
+   "head": "New Shared / Generic Email tick box",
+   "sub": "When ticked, people are identified by account, mobile and name.",
+   "text": "Now, leads and contacts have a Shared / Generic Email tick box. When it's ticked, people are identified by their account, mobile number and name instead.",
+   "say": "Now, leads and contacts have a Shared Generic Email tick box. When it's ticked, people are identified by their account, mobile number and name instead.",
    "pieces": [
     [
      1.6,
@@ -33,10 +33,11 @@
    ]
   },
   {
-   "beat": "Demo",
-   "head": "Flagged lead converts",
-   "sub": "No mobile and name match on the account, so a new contact is created.",
-   "text": "Here, a flagged lead converts. No contact matches its mobile and name, so a new one is created.",
+   "beat": "In action",
+   "head": "Converting a shared-email lead",
+   "sub": "No one matches this mobile and name, so a new contact is created.",
+   "text": "Here, a lead with the box ticked is converted. Nobody on the account has the same mobile and name, so a new contact is created.",
+   "say": "Here, a lead with the box ticked is converted. Nobody on the account has the same mobile and name, so a new contact is created.",
    "pieces": [
     [
      3.4,
@@ -46,10 +47,11 @@
    ]
   },
   {
-   "beat": "Result",
-   "head": "Shared emails save side by side",
-   "sub": "Same mobile and same name is still blocked.",
-   "text": "Contacts sharing one email now save side by side, while the same mobile and name is still blocked.",
+   "beat": "What you'll notice",
+   "head": "Team members save side by side",
+   "sub": "The same person, with the same name and mobile, is still caught.",
+   "text": "Several people from one team can now share an email, while real duplicates are still caught.",
+   "say": "Several people from one team can now share an email, while real duplicates are still caught.",
    "pieces": [
     [
      12,
@@ -109,15 +111,15 @@
   },
   {
    "src": 12.3,
-   "x": 0,
+   "x": 159,
    "y": 214,
-   "w": 1584
+   "w": 1600
   },
   {
    "src": 19.5,
-   "x": 0,
+   "x": 159,
    "y": 214,
-   "w": 1584
+   "w": 1600
   },
   {
    "src": 20.3,

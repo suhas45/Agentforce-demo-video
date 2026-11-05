@@ -93,7 +93,7 @@ def chapter(tid, idx):
             if a <= src <= b:
                 return o + min((src - a) / sp, tgt)
         return segs[-1][2] + segs[-1][4]
-    cam = [{"t": m(c["src"]), "x": c["x"], "y": c["y"], "w": c["w"]} for c in T["cam"]]
+    cam = sorted(({"t": m(c["src"]), "x": c["x"], "y": c["y"], "w": c["w"]} for c in T["cam"]), key=lambda c: c["t"])
     focus = [{"t0": m(f["src0"]), "t1": m(f["src1"]), **{k: f[k] for k in "xywh"}} for f in T["focus"]]
     cfg = {"mode": "chapter", "dur": dur, "id": T["id"], "title": T["title"], "area": T["area"], "index": idx,
            "total": REL["total"], "cardEnd": CARD_END, "lines": lines, "cam": cam, "focus": focus,
@@ -133,7 +133,7 @@ def whoosh():
 # ---- build segments
 parts, voice, sfx, t0 = [], [], [], 0.0
 ids = ONLY or REL["tickets"]
-d, au = card("intro", REL["intro"]["text"], "RELEASE WALKTHROUGH", REL["title"], REL["subtitle"],
+d, au = card("intro", REL["intro"]["text"], "WHAT'S NEW", REL["title"], REL["subtitle"],
              [f"{i}" for i in REL["tickets"]])
 parts.append(f"{B}/intro.mp4"); voice += [(t0 + s, a) for s, a in au]; t0 += d
 for k, tid in enumerate(ids):
@@ -142,7 +142,7 @@ for k, tid in enumerate(ids):
     parts.append(f"{B}/{tid}.mp4"); voice += [(t0 + s, a) for s, a in au]
     sfx += [(t0 + 0.05, 0.6), (t0 + CARD_END - 0.6, 1.0)]
     t0 += d
-d, au = card("end", REL["end"]["text"], "THAT'S A WRAP", REL["title"], f"{len(REL['tickets'])} of {REL['total']} tickets covered", None)
+d, au = card("end", REL["end"]["text"], "THANKS FOR WATCHING", REL["title"], f"{len(REL['tickets'])} improvements", None)
 parts.append(f"{B}/end.mp4"); voice += [(t0 + s, a) for s, a in au]; sfx.append((t0 + 0.05, 0.6)); t0 += d
 if PREVIEW:
     print("preview done"); sys.exit()

@@ -1,0 +1,142 @@
+{
+ "id": "E4-4",
+ "title": "Close open tasks on conversion",
+ "area": "Leads",
+ "recording": "recordings/e4/E4-4.mp4",
+ "lines": [
+  {
+   "beat": "Before",
+   "head": "Converted leads left tasks open",
+   "sub": "Follow-up tasks stayed in everyone's open task lists.",
+   "text": "E4-4. When a lead was converted, its follow-up tasks stayed open, cluttering task lists and overdue reports.",
+   "say": "E four four. When a lead was converted, its follow-up tasks stayed open, cluttering task lists and overdue reports.",
+   "pieces": [
+    [
+     0,
+     5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "What's new",
+   "head": "Conversion now closes them",
+   "sub": "All of the lead's open tasks are marked completed.",
+   "text": "Now, converting a lead automatically marks all of its open tasks as completed.",
+   "say": "Now, converting a lead automatically marks all of its open tasks as completed.",
+   "pieces": [
+    [
+     5,
+     12,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "In action",
+   "head": "Tasks show as completed",
+   "sub": "On the new contact, the lead's tasks appear as done.",
+   "text": "Here, after conversion, the lead's follow-up tasks appear on the contact as completed.",
+   "say": "Here, after conversion, the lead's follow-up tasks appear on the contact as completed.",
+   "pieces": [
+    [
+     23,
+     27.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "What you'll notice",
+   "head": "Other tasks stay untouched",
+   "sub": "If the lead joins an existing contact, that contact's own tasks stay open.",
+   "text": "And if the lead joins an existing contact, that contact's own open tasks are left as they are.",
+   "say": "And if the lead joins an existing contact, that contact's own open tasks are left as they are.",
+   "pieces": [
+    [
+     51,
+     61,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 940,
+   "y": 380,
+   "w": 960
+  },
+  {
+   "src": 4.8,
+   "x": 940,
+   "y": 380,
+   "w": 960
+  },
+  {
+   "src": 5.6,
+   "x": 420,
+   "y": 250,
+   "w": 1100
+  },
+  {
+   "src": 12,
+   "x": 420,
+   "y": 250,
+   "w": 1100
+  },
+  {
+   "src": 23,
+   "x": 940,
+   "y": 500,
+   "w": 960
+  },
+  {
+   "src": 27.5,
+   "x": 940,
+   "y": 500,
+   "w": 960
+  },
+  {
+   "src": 51,
+   "x": 940,
+   "y": 420,
+   "w": 960
+  }
+ ],
+ "focus": [
+  {
+   "src0": 1.0,
+   "src1": 4.9,
+   "x": 1010,
+   "y": 540,
+   "w": 860,
+   "h": 110
+  },
+  {
+   "src0": 9.5,
+   "src1": 11.9,
+   "x": 630,
+   "y": 480,
+   "w": 660,
+   "h": 160
+  },
+  {
+   "src0": 24.6,
+   "src1": 27.5,
+   "x": 985,
+   "y": 545,
+   "w": 880,
+   "h": 365
+  },
+  {
+   "src0": 53,
+   "src1": 60.5,
+   "x": 990,
+   "y": 462,
+   "w": 880,
+   "h": 72
+  }
+ ]
+}

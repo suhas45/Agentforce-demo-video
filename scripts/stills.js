@@ -6,7 +6,7 @@ const fs = require('fs');
 const [plan, dir] = process.argv.slice(2);
 const P = JSON.parse(fs.readFileSync(plan));
 (async () => {
-  const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium-1194/chrome-linux/chrome' });
+  const b = await chromium.launch({ executablePath: process.env.CHROME || require('fs').readdirSync('/opt/pw-browsers').filter(d => /^chromium-\d+$/.test(d)).map(d => ['/opt/pw-browsers/' + d + '/chrome-linux64/chrome', '/opt/pw-browsers/' + d + '/chrome-linux/chrome']).flat().find(p => require('fs').existsSync(p)) });
   const p = await b.newPage({ viewport: { width: 1920, height: 1080 } });
   await p.goto('file://' + path.resolve(P.frame || 'video/frame.html'));
   await p.waitForFunction('window.ready');
