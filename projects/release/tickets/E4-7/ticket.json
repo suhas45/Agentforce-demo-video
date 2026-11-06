@@ -1,6 +1,6 @@
 {
  "id": "E4-7",
- "title": "Product Managers reassign owners",
+ "title": "Product Managers reassign opportunities",
  "area": "Opportunities",
  "recording": "recordings/e4/E4-7.mp4",
  "lines": [
@@ -8,8 +8,8 @@
    "beat": "Before",
    "head": "Only admins could reassign",
    "sub": "Product Managers had to ask an admin to change an owner.",
-   "text": "E4-7. Product Managers often know who should handle an opportunity, but they had to ask an admin to change its owner.",
-   "say": "E four seven. Product Managers often know who should handle an opportunity, but they had to ask an admin to change its owner.",
+   "text": "Product Managers often know who should handle an opportunity, but they had to ask an admin to change its owner.",
+   "say": "Product Managers often know who should handle an opportunity, but they had to ask an admin to change its owner.",
    "pieces": [
     [
      10,
@@ -122,5 +122,6 @@
    "w": 400,
    "h": 130
   }
- ]
+ ],
+ "minY": 250
 }

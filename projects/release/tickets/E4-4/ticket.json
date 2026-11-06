@@ -1,6 +1,6 @@
 {
  "id": "E4-4",
- "title": "Close open tasks on conversion",
+ "title": "Tasks close automatically on conversion",
  "area": "Leads",
  "recording": "recordings/e4/E4-4.mp4",
  "lines": [
@@ -8,8 +8,8 @@
    "beat": "Before",
    "head": "Converted leads left tasks open",
    "sub": "Follow-up tasks stayed in everyone's open task lists.",
-   "text": "E4-4. When a lead was converted, its follow-up tasks stayed open, cluttering task lists and overdue reports.",
-   "say": "E four four. When a lead was converted, its follow-up tasks stayed open, cluttering task lists and overdue reports.",
+   "text": "When a lead was converted, its follow-up tasks stayed open, cluttering task lists and overdue reports.",
+   "say": "When a lead was converted, its follow-up tasks stayed open, cluttering task lists and overdue reports.",
    "pieces": [
     [
      0,

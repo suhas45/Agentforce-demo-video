@@ -1,6 +1,6 @@
 {
  "id": "E4-1",
- "title": "Shared / Generic Email",
+ "title": "Shared team email addresses",
  "area": "Leads & Contacts",
  "recording": "recordings/e4/E4-1.mp4",
  "lines": [
@@ -8,8 +8,8 @@
    "beat": "Before",
    "head": "One team email, many people",
    "sub": "A second person with the same email was blocked as a duplicate.",
-   "text": "E4-1. Many customers use one email for a whole team, like a QC inbox. Adding a second person from that team was blocked as a duplicate.",
-   "say": "E four one. Many customers use one email for a whole team, like a QC inbox. Adding a second person from that team was blocked as a duplicate.",
+   "text": "Many customers use one email for a whole team, like a QC inbox. Adding a second person from that team was blocked as a duplicate.",
+   "say": "Many customers use one email for a whole team, like a QC inbox. Adding a second person from that team was blocked as a duplicate.",
    "pieces": [
     [
      0,

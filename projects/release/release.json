@@ -1,5 +1,5 @@
 {
- "title": "Epic E4",
+ "title": "What's new",
  "subtitle": "Leads, contacts and opportunities",
  "total": 5,
  "tickets": [
@@ -17,5 +17,12 @@
  "end": {
   "text": "That's everything in this update. Thanks for watching."
  },
- "output": "Epic_E4_Walkthrough.mp4"
+ "output": "Whats_New_Leads_Contacts_Opportunities.mp4",
+ "list": [
+  "Shared team email addresses",
+  "Tasks close automatically on conversion",
+  "Account access respected on conversion",
+  "Product Managers reassign opportunities",
+  "Any number of Product Managers"
+ ]
 }

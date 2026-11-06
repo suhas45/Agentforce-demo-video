@@ -1,6 +1,6 @@
 {
  "id": "E4-10",
- "title": "Many Product Managers per principal",
+ "title": "Any number of Product Managers",
  "area": "Principal accounts",
  "recording": "recordings/e4/E4-10.mp4",
  "lines": [
@@ -8,8 +8,8 @@
    "beat": "Before",
    "head": "Only two Product Managers",
    "sub": "Principals covered by more PMs couldn't record them all.",
-   "text": "E4-10. A principal could only list two Product Managers, even when more people managed it.",
-   "say": "E four ten. A principal could only list two Product Managers, even when more people managed it.",
+   "text": "A principal could only list two Product Managers, even when more people managed it.",
+   "say": "A principal could only list two Product Managers, even when more people managed it.",
    "pieces": [
     [
      0,

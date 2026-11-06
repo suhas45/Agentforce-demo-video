@@ -1,6 +1,6 @@
 {
  "id": "E4-6",
- "title": "Protected accounts on conversion",
+ "title": "Account access respected on conversion",
  "area": "Leads",
  "recording": "recordings/e4/E4-6.mp4",
  "lines": [
@@ -8,8 +8,8 @@
    "beat": "Before",
    "head": "Leads could join hidden accounts",
    "sub": "Conversion could match an account owned by another team.",
-   "text": "E4-6. A lead could be converted into a customer account that belonged to someone else's territory.",
-   "say": "E four six. A lead could be converted into a customer account that belonged to someone else's territory.",
+   "text": "A lead could be converted into a customer account that belonged to someone else's territory.",
+   "say": "A lead could be converted into a customer account that belonged to someone else's territory.",
    "pieces": [
     [
      0,

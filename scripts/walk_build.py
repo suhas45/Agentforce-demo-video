@@ -36,7 +36,7 @@ def tts(text):
 
 
 def render(cfg, out):
-    p = out.replace(".mp4", ".json")
+    p = out.replace(".mp4", ".preview.json" if PREVIEW else ".json")
     if not PREVIEW and os.path.exists(out) and os.path.exists(p) and json.load(open(p)) == json.loads(json.dumps(cfg)):
         return  # unchanged segment: keep the existing render
     json.dump(cfg, open(p, "w"))
@@ -97,10 +97,13 @@ def chapter(tid, idx):
         return segs[-1][2] + segs[-1][4]
     cam = sorted(({"t": m(c["src"]), "x": c["x"], "y": c["y"], "w": c["w"]} for c in T["cam"]), key=lambda c: c["t"])
     focus = [{"t0": m(f["src0"]), "t1": m(f["src1"]), **{k: f[k] for k in "xywh"}} for f in T["focus"]]
+    info = subprocess.run([FF, "-i", T["recording"]], capture_output=True, text=True).stderr
+    import re
+    RW, RH = map(int, re.search(r"Video: .*?, (\d{3,5})x(\d{3,5})", info).groups())
     cfg = {"mode": "chapter", "dur": dur, "id": T["id"], "title": T["title"], "area": T["area"], "index": idx,
            "total": REL["total"], "cardEnd": CARD_END, "lines": lines, "cam": cam, "focus": focus,
-           "rec": {"start": rec_start, "n": n, "dir": "../../" + fdir},
-           "preview": [1.2] + [l["start"] + 1.5 for l in lines] + [f["t0"] + .6 for f in focus]}
+           "rec": {"start": rec_start, "n": n, "dir": "../../" + fdir, "W": RW, "H": RH, "minY": T.get("minY", 205)},
+           "preview": [l["start"] + 1.5 for l in lines] + [f["t0"] + .6 for f in focus]}
     render(cfg, f"{B}/{tid}.mp4")
     return dur, audio
 
@@ -135,8 +138,7 @@ def whoosh():
 # ---- build segments
 parts, voice, sfx, t0 = [], [], [], 0.0
 ids = ONLY or REL["tickets"]
-d, au = card("intro", REL["intro"]["text"], "WHAT'S NEW", REL["title"], REL["subtitle"],
-             [f"{i}" for i in REL["tickets"]])
+d, au = card("intro", REL["intro"]["text"], "SALESFORCE UPDATE", REL["title"], REL["subtitle"], REL.get("list"))
 parts.append(f"{B}/intro.mp4"); voice += [(t0 + s, a) for s, a in au]; t0 += d
 for k, tid in enumerate(ids):
     idx = REL["tickets"].index(tid) + 1
