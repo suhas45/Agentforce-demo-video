@@ -1,0 +1,154 @@
+{
+ "id": "E5-6",
+ "title": "Profit in rupees on foreign orders",
+ "area": "Margins & approvals",
+ "recording": "recordings/e5/e5-6.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "On US dollar or euro orders, profit was shown only in the foreign currency, and had to be converted by hand.",
+   "pieces": [
+    [
+     0,
+     8,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, the margin calculation also shows gross and net profit in rupees, using the order's exchange rate.",
+   "pieces": [
+    [
+     73.5,
+     82,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Commission approvals show the order value in its own currency, the rupee value, the exchange rate and the commission.",
+   "pieces": [
+    [
+     48,
+     58,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "So the approver has everything needed to decide, right in the request.",
+   "pieces": [
+    [
+     58,
+     66,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 0,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 8,
+   "x": 0,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 77.5,
+   "x": 900,
+   "y": 350,
+   "w": 950
+  },
+  {
+   "src": 82,
+   "x": 900,
+   "y": 350,
+   "w": 950
+  },
+  {
+   "src": 48,
+   "x": 0,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 53,
+   "x": 0,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 54,
+   "x": 500,
+   "y": 350,
+   "w": 1000
+  },
+  {
+   "src": 58,
+   "x": 500,
+   "y": 350,
+   "w": 1000
+  },
+  {
+   "src": 59,
+   "x": 400,
+   "y": 250,
+   "w": 1100
+  },
+  {
+   "src": 73.5,
+   "x": 100,
+   "y": 350,
+   "w": 1000
+  },
+  {
+   "src": 76.5,
+   "x": 100,
+   "y": 350,
+   "w": 1000
+  }
+ ],
+ "focus": [
+  {
+   "src0": 78,
+   "src1": 80,
+   "x": 1560,
+   "y": 490,
+   "w": 200,
+   "h": 44
+  },
+  {
+   "src0": 80,
+   "src1": 82,
+   "x": 1560,
+   "y": 674,
+   "w": 200,
+   "h": 40
+  },
+  {
+   "src0": 54.8,
+   "src1": 58,
+   "x": 640,
+   "y": 595,
+   "w": 600,
+   "h": 180
+  }
+ ]
+}

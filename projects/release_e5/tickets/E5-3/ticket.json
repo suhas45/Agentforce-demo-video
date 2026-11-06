@@ -1,0 +1,132 @@
+{
+ "id": "E5-3",
+ "title": "Daily overdue and EMD emails",
+ "area": "Collections",
+ "recording": "recordings/e5/e5-3-all.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Overdue payments used to be chased only when someone ran a report.",
+   "pieces": [
+    [
+     0,
+     3.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, every morning at 8, the salesperson gets one email per order, listing each overdue payment and the total pending, with their manager in copy.",
+   "pieces": [
+    [
+     3.5,
+     12.67,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "And when the EMD on a tender order is marked as submitted,",
+   "pieces": [
+    [
+     15.17,
+     20.67,
+     1
+    ]
+   ],
+   "say": "And when the E M D on a tender order is marked as submitted,"
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "the salesperson is emailed the EMD details straight away.",
+   "pieces": [
+    [
+     22.67,
+     32.87,
+     1
+    ]
+   ],
+   "say": "the salesperson is emailed the E M D details straight away."
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 60,
+   "y": 300,
+   "w": 1250
+  },
+  {
+   "src": 3.5,
+   "x": 60,
+   "y": 300,
+   "w": 1250
+  },
+  {
+   "src": 4.3,
+   "x": 0,
+   "y": 150,
+   "w": 1600
+  },
+  {
+   "src": 12.67,
+   "x": 0,
+   "y": 150,
+   "w": 1600
+  },
+  {
+   "src": 15.17,
+   "x": 0,
+   "y": 220,
+   "w": 1300
+  },
+  {
+   "src": 20.67,
+   "x": 0,
+   "y": 220,
+   "w": 1300
+  },
+  {
+   "src": 22.67,
+   "x": 200,
+   "y": 250,
+   "w": 1450
+  }
+ ],
+ "focus": [
+  {
+   "src0": 5,
+   "src1": 12.6,
+   "x": 44,
+   "y": 550,
+   "w": 1440,
+   "h": 250
+  },
+  {
+   "src0": 18.7,
+   "src1": 20.0,
+   "x": 120,
+   "y": 545,
+   "w": 540,
+   "h": 80
+  },
+  {
+   "src0": 27,
+   "src1": 32.87,
+   "x": 230,
+   "y": 480,
+   "w": 900,
+   "h": 360
+  }
+ ]
+}

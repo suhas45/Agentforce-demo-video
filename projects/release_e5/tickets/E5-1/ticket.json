@@ -1,0 +1,122 @@
+{
+ "id": "E5-1",
+ "title": "Terms carried over from the quote",
+ "area": "Quotes & sales orders",
+ "recording": "recordings/e5/e5-1.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Payment and warranty terms agreed on the quote used to be typed again on the sales order, which led to mismatches.",
+   "pieces": [
+    [
+     22,
+     28,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, the terms are set once, on the quote. Before saving, the user confirms them, because they'll be locked from here on.",
+   "pieces": [
+    [
+     28,
+     38.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "When the sales order is created from the quote, its payment and warranty terms are copied across automatically.",
+   "pieces": [
+    [
+     50,
+     58.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "They're read-only on the order, so agreed terms can't be quietly changed after booking.",
+   "pieces": [
+    [
+     58.5,
+     64,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 22,
+   "x": 680,
+   "y": 250,
+   "w": 950
+  },
+  {
+   "src": 33.6,
+   "x": 680,
+   "y": 250,
+   "w": 950
+  },
+  {
+   "src": 34.4,
+   "x": 380,
+   "y": 273,
+   "w": 1150
+  },
+  {
+   "src": 38.5,
+   "x": 380,
+   "y": 273,
+   "w": 1150
+  },
+  {
+   "src": 50,
+   "x": 300,
+   "y": 250,
+   "w": 1320
+  },
+  {
+   "src": 56.8,
+   "x": 300,
+   "y": 250,
+   "w": 1320
+  },
+  {
+   "src": 58.5,
+   "x": 60,
+   "y": 450,
+   "w": 1250
+  }
+ ],
+ "focus": [
+  {
+   "src0": 35.2,
+   "src1": 38.4,
+   "x": 630,
+   "y": 395,
+   "w": 665,
+   "h": 220
+  },
+  {
+   "src0": 59.2,
+   "src1": 64,
+   "x": 110,
+   "y": 605,
+   "w": 1340,
+   "h": 200
+  }
+ ]
+}

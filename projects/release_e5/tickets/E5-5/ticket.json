@@ -1,0 +1,126 @@
+{
+ "id": "E5-5",
+ "title": "A shorter, clearer order PDF",
+ "area": "Order checklist",
+ "recording": "recordings/e5/e5-5.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "The order checklist PDF used to print every optional term, even when the answer was No. That made it long, and easy to misread.",
+   "pieces": [
+    [
+     0,
+     6,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, each optional item prints only when it applies. Here, the EPCG licence is Yes, but the end-user certificate is No.",
+   "pieces": [
+    [
+     6,
+     13,
+     1
+    ]
+   ],
+   "say": "Now, each optional item prints only when it applies. Here, the E P C G licence is Yes, but the end-user certificate is No."
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "In the PDF, the EPCG licence appears, and the end-user certificate is simply left out.",
+   "pieces": [
+    [
+     20,
+     31,
+     1
+    ]
+   ],
+   "say": "In the PDF, the E P C G licence appears, and the end-user certificate is simply left out."
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Items that apply, like the PBG, still show with their costs, and the totals are unchanged.",
+   "pieces": [
+    [
+     31,
+     37,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 60,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 6,
+   "x": 60,
+   "y": 400,
+   "w": 1300
+  },
+  {
+   "src": 13,
+   "x": 60,
+   "y": 400,
+   "w": 1300
+  },
+  {
+   "src": 20,
+   "x": 250,
+   "y": 400,
+   "w": 1400
+  },
+  {
+   "src": 28,
+   "x": 300,
+   "y": 430,
+   "w": 1300
+  },
+  {
+   "src": 32,
+   "x": 300,
+   "y": 420,
+   "w": 1300
+  }
+ ],
+ "focus": [
+  {
+   "src0": 8,
+   "src1": 13,
+   "x": 110,
+   "y": 690,
+   "w": 500,
+   "h": 160
+  },
+  {
+   "src0": 28.5,
+   "src1": 31,
+   "x": 350,
+   "y": 680,
+   "w": 1200,
+   "h": 150
+  },
+  {
+   "src0": 32.5,
+   "src1": 37,
+   "x": 345,
+   "y": 600,
+   "w": 1205,
+   "h": 250
+  }
+ ]
+}

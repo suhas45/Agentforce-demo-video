@@ -1,0 +1,130 @@
+{
+ "id": "E5-8",
+ "title": "Courier and tracking on dispatch",
+ "area": "Dispatch",
+ "recording": "recordings/e5/e5-8.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Salespeople used to ask Head Office for the courier and tracking number whenever a customer asked, where's my shipment?",
+   "pieces": [
+    [
+     0,
+     8,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, when a line is dispatched, the courier is picked from a fixed list, so names stay consistent.",
+   "pieces": [
+    [
+     24,
+     31,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Enter the tracking number, and the tracking link is filled in automatically.",
+   "pieces": [
+    [
+     32,
+     40,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Courier, tracking number and link are all required, so every dispatched line can be tracked in one click.",
+   "pieces": [
+    [
+     62,
+     76.4,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 0,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 8,
+   "x": 0,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 24,
+   "x": 300,
+   "y": 490,
+   "w": 1100
+  },
+  {
+   "src": 31,
+   "x": 300,
+   "y": 490,
+   "w": 1100
+  },
+  {
+   "src": 32,
+   "x": 300,
+   "y": 400,
+   "w": 1100
+  },
+  {
+   "src": 40,
+   "x": 300,
+   "y": 400,
+   "w": 1100
+  },
+  {
+   "src": 62,
+   "x": 400,
+   "y": 364,
+   "w": 1000
+  }
+ ],
+ "focus": [
+  {
+   "src0": 26,
+   "src1": 30.5,
+   "x": 495,
+   "y": 600,
+   "w": 300,
+   "h": 330
+  },
+  {
+   "src0": 35.5,
+   "src1": 40,
+   "x": 490,
+   "y": 540,
+   "w": 720,
+   "h": 65
+  },
+  {
+   "src0": 64.5,
+   "src1": 70,
+   "x": 440,
+   "y": 460,
+   "w": 770,
+   "h": 310
+  }
+ ]
+}

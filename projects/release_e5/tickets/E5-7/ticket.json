@@ -1,0 +1,130 @@
+{
+ "id": "E5-7",
+ "title": "Order details lock as it moves on",
+ "area": "Sales order stages",
+ "recording": "recordings/e5/e5-7.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Details entered during procurement and dispatch could still be changed after the order had moved on.",
+   "pieces": [
+    [
+     0,
+     12,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, procurement details lock once the order reaches installation. They stay visible, but can't be edited.",
+   "pieces": [
+    [
+     41,
+     48,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Dispatch details lock when the order moves to payment.",
+   "pieces": [
+    [
+     61.5,
+     67,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "And installation details lock once the order is completed. The same rule applies to everyone, administrators included.",
+   "pieces": [
+    [
+     109,
+     117.1,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 0,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 12,
+   "x": 0,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 41,
+   "x": 60,
+   "y": 500,
+   "w": 1300
+  },
+  {
+   "src": 48,
+   "x": 60,
+   "y": 500,
+   "w": 1300
+  },
+  {
+   "src": 61.5,
+   "x": 0,
+   "y": 150,
+   "w": 1300
+  },
+  {
+   "src": 67,
+   "x": 0,
+   "y": 150,
+   "w": 1300
+  },
+  {
+   "src": 109,
+   "x": 60,
+   "y": 500,
+   "w": 1300
+  }
+ ],
+ "focus": [
+  {
+   "src0": 44,
+   "src1": 48,
+   "x": 120,
+   "y": 900,
+   "w": 1110,
+   "h": 95
+  },
+  {
+   "src0": 64.3,
+   "src1": 67,
+   "x": 110,
+   "y": 400,
+   "w": 1120,
+   "h": 130
+  },
+  {
+   "src0": 111,
+   "src1": 114,
+   "x": 110,
+   "y": 795,
+   "w": 1120,
+   "h": 80
+  }
+ ]
+}

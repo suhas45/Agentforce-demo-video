@@ -1,0 +1,34 @@
+{
+ "title": "What's new",
+ "subtitle": "Sales orders",
+ "total": 8,
+ "tickets": [
+  "E5-1",
+  "E5-5",
+  "E5-2",
+  "E5-8",
+  "E5-7",
+  "E5-3",
+  "E5-4",
+  "E5-6"
+ ],
+ "list": [
+  "Terms carried over from the quote",
+  "A shorter, clearer order PDF",
+  "Order updates by email",
+  "Courier and tracking on dispatch",
+  "Order details lock as it moves on",
+  "Daily overdue and EMD emails",
+  "Weekly reminder to the customer",
+  "Profit in rupees on foreign orders"
+ ],
+ "voice": "af_heart",
+ "speed": 1.0,
+ "intro": {
+  "text": "Here's what's new for sales orders. Eight improvements, one at a time."
+ },
+ "end": {
+  "text": "That's everything in this update. Thanks for watching."
+ },
+ "output": "Whats_New_Sales_Orders.mp4"
+}
