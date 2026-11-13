@@ -1,0 +1,120 @@
+{
+ "id": "B3",
+ "title": "Price a bundle as one item",
+ "area": "Quote wizard",
+ "recording": "recordings/e1/e1-56.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "On the next step, the bundle appears as one group, with its products listed underneath.",
+   "pieces": [
+    [
+     36,
+     44,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Set the bundle quantity once, and every product inside updates with it.",
+   "pieces": [
+    [
+     44,
+     58,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Discounts can still be set on each product, exactly as before, so approvals work the same way.",
+   "pieces": [
+    [
+     58,
+     68,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "On custom list price quotes, enter one price for the bundle, and it's spread across its products automatically.",
+   "pieces": [
+    [
+     78,
+     96,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 36,
+   "x": 300,
+   "y": 400,
+   "w": 1300
+  },
+  {
+   "src": 44,
+   "x": 300,
+   "y": 400,
+   "w": 1300
+  },
+  {
+   "src": 45,
+   "x": 300,
+   "y": 330,
+   "w": 1300
+  },
+  {
+   "src": 96,
+   "x": 300,
+   "y": 330,
+   "w": 1300
+  }
+ ],
+ "focus": [
+  {
+   "src0": 38.5,
+   "src1": 43.8,
+   "x": 316,
+   "y": 478,
+   "w": 1250,
+   "h": 105
+  },
+  {
+   "src0": 62,
+   "src1": 67.8,
+   "x": 1168,
+   "y": 540,
+   "w": 128,
+   "h": 200
+  },
+  {
+   "src0": 83,
+   "src1": 90,
+   "x": 866,
+   "y": 372,
+   "w": 180,
+   "h": 50
+  },
+  {
+   "src0": 91,
+   "src1": 96,
+   "x": 1110,
+   "y": 530,
+   "w": 180,
+   "h": 250
+  }
+ ]
+}

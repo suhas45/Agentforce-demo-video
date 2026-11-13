@@ -1,0 +1,123 @@
+{
+ "id": "B5",
+ "title": "Alert when a product is withdrawn",
+ "area": "Quotes",
+ "recording": "recordings/e1/e1-8.mp4",
+ "minY": 215,
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "When a product was withdrawn, salespeople with open quotes for it weren't told.",
+   "pieces": [
+    [
+     0,
+     4,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, when a product is deactivated,",
+   "pieces": [
+    [
+     4,
+     10,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "every salesperson with an open quote that includes it gets one email.",
+   "pieces": [
+    [
+     11,
+     20,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "It lists the quotes to revise, so nothing is sent or accepted for a product that's no longer sold.",
+   "pieces": [
+    [
+     21,
+     27.5,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 200,
+   "y": 250,
+   "w": 1500
+  },
+  {
+   "src": 4,
+   "x": 200,
+   "y": 250,
+   "w": 1500
+  },
+  {
+   "src": 4.8,
+   "x": 250,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 10,
+   "x": 250,
+   "y": 300,
+   "w": 1300
+  },
+  {
+   "src": 11,
+   "x": 900,
+   "y": 480,
+   "w": 1050
+  },
+  {
+   "src": 20,
+   "x": 900,
+   "y": 480,
+   "w": 1050
+  },
+  {
+   "src": 21,
+   "x": 0,
+   "y": 250,
+   "w": 1300
+  }
+ ],
+ "focus": [
+  {
+   "src0": 14,
+   "src1": 19.8,
+   "x": 1000,
+   "y": 733,
+   "w": 870,
+   "h": 42
+  },
+  {
+   "src0": 22.5,
+   "src1": 27.5,
+   "x": 30,
+   "y": 380,
+   "w": 860,
+   "h": 70
+  }
+ ]
+}

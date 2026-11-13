@@ -1,0 +1,28 @@
+{
+ "title": "What's new",
+ "subtitle": "Product bundles on quotes",
+ "total": 5,
+ "tickets": [
+  "B1",
+  "B2",
+  "B3",
+  "B4",
+  "B5"
+ ],
+ "list": [
+  "Head Office creates a bundle",
+  "Add a saved bundle to a quote",
+  "Price a bundle as one item",
+  "Bundles on the quote PDF",
+  "Alert when a product is withdrawn"
+ ],
+ "voice": "af_heart",
+ "speed": 1.0,
+ "intro": {
+  "text": "Here's what's new: product bundles on quotes. Five improvements, one at a time."
+ },
+ "end": {
+  "text": "That's everything in this update. Thanks for watching."
+ },
+ "output": "Whats_New_Product_Bundles.mp4"
+}

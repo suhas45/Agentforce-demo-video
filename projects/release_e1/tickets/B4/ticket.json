@@ -1,0 +1,110 @@
+{
+ "id": "B4",
+ "title": "Bundles on the quote PDF",
+ "area": "Quote PDF",
+ "recording": "recordings/e1/e1-479.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Customer quotes used to list every product separately, so a kit couldn't be shown as one item.",
+   "pieces": [
+    [
+     0,
+     8,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, each bundle prints as a single row on the quote PDF, with its quantity, price and total.",
+   "pieces": [
+    [
+     30,
+     34.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "With show items on, its products are listed underneath, marked as included.",
+   "pieces": [
+    [
+     34.5,
+     41,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Turn it off, and only the bundle row prints. Everything else on the PDF stays the same.",
+   "pieces": [
+    [
+     70,
+     79.7,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 300,
+   "y": 250,
+   "w": 1400
+  },
+  {
+   "src": 8,
+   "x": 300,
+   "y": 250,
+   "w": 1400
+  },
+  {
+   "src": 27,
+   "x": 380,
+   "y": 420,
+   "w": 1200
+  },
+  {
+   "src": 48,
+   "x": 380,
+   "y": 420,
+   "w": 1200
+  },
+  {
+   "src": 70,
+   "x": 380,
+   "y": 420,
+   "w": 1200
+  }
+ ],
+ "focus": [
+  {
+   "src0": 35,
+   "src1": 41,
+   "x": 1218,
+   "y": 592,
+   "w": 266,
+   "h": 120
+  },
+  {
+   "src0": 74,
+   "src1": 79.7,
+   "x": 412,
+   "y": 580,
+   "w": 1070,
+   "h": 46
+  }
+ ]
+}

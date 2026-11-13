@@ -1,0 +1,102 @@
+{
+ "id": "B1",
+ "title": "Head Office creates a bundle",
+ "area": "Bundle builder",
+ "recording": "recordings/e1/e1-10.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Sales teams often quote the same group of products together, but each product had to be added one at a time.",
+   "pieces": [
+    [
+     0,
+     6,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, Head Office can save a group of products as a reusable bundle, by searching for the products and ticking them.",
+   "pieces": [
+    [
+     14,
+     22,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Each item gets a quantity, the total at list price is shown, and the bundle gets a simple name.",
+   "pieces": [
+    [
+     22,
+     31,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "The bundle is saved, and every salesperson can use it straight away.",
+   "pieces": [
+    [
+     31,
+     40.3,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 0,
+   "y": 214,
+   "w": 1420
+  },
+  {
+   "src": 22,
+   "x": 0,
+   "y": 214,
+   "w": 1420
+  },
+  {
+   "src": 22.8,
+   "x": 0,
+   "y": 300,
+   "w": 1700
+  },
+  {
+   "src": 31,
+   "x": 0,
+   "y": 300,
+   "w": 1700
+  },
+  {
+   "src": 32,
+   "x": 0,
+   "y": 330,
+   "w": 1400
+  }
+ ],
+ "focus": [
+  {
+   "src0": 33,
+   "src1": 40.3,
+   "x": 20,
+   "y": 380,
+   "w": 1260,
+   "h": 380
+  }
+ ]
+}

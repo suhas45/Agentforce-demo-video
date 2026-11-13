@@ -1,0 +1,102 @@
+{
+ "id": "B2",
+ "title": "Add a saved bundle to a quote",
+ "area": "Quote wizard",
+ "recording": "recordings/e1/e1-56.mp4",
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Adding a common kit to a quote used to mean picking every product separately.",
+   "pieces": [
+    [
+     0,
+     4,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, the first step of the quote has a Saved bundles tab, listing every bundle Head Office has created.",
+   "pieces": [
+    [
+     4,
+     13,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Search for a bundle, and preview its items, quantities and total at list price.",
+   "pieces": [
+    [
+     13,
+     24,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Tick it, add any single products alongside, and move on to the next step.",
+   "pieces": [
+    [
+     24,
+     36,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 300,
+   "y": 250,
+   "w": 1400
+  },
+  {
+   "src": 4,
+   "x": 300,
+   "y": 250,
+   "w": 1400
+  },
+  {
+   "src": 4.8,
+   "x": 300,
+   "y": 380,
+   "w": 1300
+  },
+  {
+   "src": 24,
+   "x": 300,
+   "y": 380,
+   "w": 1300
+  },
+  {
+   "src": 25,
+   "x": 300,
+   "y": 300,
+   "w": 1500
+  }
+ ],
+ "focus": [
+  {
+   "src0": 19,
+   "src1": 24,
+   "x": 320,
+   "y": 535,
+   "w": 1240,
+   "h": 225
+  }
+ ]
+}
