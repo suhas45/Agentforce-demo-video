@@ -1,0 +1,113 @@
+{
+ "id": "M1",
+ "title": "Payment terms picked by segment",
+ "area": "Quotes",
+ "recording": "recordings/e2/E2-B-quote-to-order-failed-attempt1.mp4",
+ "minY": 40,
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Payment terms used to be one long list, with nothing checking they could be split into instalments.",
+   "pieces": [
+    [
+     100,
+     112,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, the salesperson picks a payment term segment first, like full payment, or advance and balance.",
+   "pieces": [
+    [
+     136,
+     150,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Only the terms in that segment are offered. Inkarp's final list has eighteen terms, in five segments.",
+   "pieces": [
+    [
+     170,
+     196,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Every term is mapped to its instalments, so it turns into payment milestones on the sales order.",
+   "pieces": [
+    [
+     204,
+     218,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 100,
+   "x": 330,
+   "y": 200,
+   "w": 1300
+  },
+  {
+   "src": 112,
+   "x": 330,
+   "y": 200,
+   "w": 1300
+  },
+  {
+   "src": 136,
+   "x": 330,
+   "y": 420,
+   "w": 1000
+  },
+  {
+   "src": 218,
+   "x": 330,
+   "y": 420,
+   "w": 1000
+  }
+ ],
+ "focus": [
+  {
+   "src0": 141,
+   "src1": 150,
+   "x": 640,
+   "y": 480,
+   "w": 622,
+   "h": 38
+  },
+  {
+   "src0": 172,
+   "src1": 196,
+   "x": 640,
+   "y": 575,
+   "w": 622,
+   "h": 120
+  },
+  {
+   "src0": 212,
+   "src1": 218,
+   "x": 630,
+   "y": 585,
+   "w": 370,
+   "h": 30
+  }
+ ]
+}

@@ -1,0 +1,98 @@
+{
+ "id": "M2",
+ "title": "Milestones created automatically",
+ "area": "Sales orders",
+ "recording": "recordings/e2/E2-B2-order-stages-ok-superseded.mp4",
+ "minY": 40,
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Instalments used to be tracked outside Salesforce, so nobody could see what was due, or when.",
+   "pieces": [
+    [
+     214,
+     219,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, when a sales order is created from a quote, its payment milestones are created automatically.",
+   "pieces": [
+    [
+     219,
+     226,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Here, a fifty-fifty term gives two milestones: an advance, and a payment on delivery. Together they always add up to the order value.",
+   "pieces": [
+    [
+     289,
+     294,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 214,
+   "x": 0,
+   "y": 180,
+   "w": 1600
+  },
+  {
+   "src": 219,
+   "x": 0,
+   "y": 180,
+   "w": 1600
+  },
+  {
+   "src": 220,
+   "x": 900,
+   "y": 440,
+   "w": 800
+  },
+  {
+   "src": 226,
+   "x": 900,
+   "y": 440,
+   "w": 800
+  },
+  {
+   "src": 289,
+   "x": 20,
+   "y": 330,
+   "w": 1050
+  }
+ ],
+ "focus": [
+  {
+   "src0": 220.5,
+   "src1": 226,
+   "x": 1080,
+   "y": 590,
+   "w": 510,
+   "h": 130
+  },
+  {
+   "src0": 289.2,
+   "src1": 294,
+   "x": 40,
+   "y": 495,
+   "w": 1000,
+   "h": 340
+  }
+ ]
+}

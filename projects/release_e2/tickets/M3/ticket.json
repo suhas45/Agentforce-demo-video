@@ -1,0 +1,94 @@
+{
+ "id": "M3",
+ "title": "Due dates from the order's dates",
+ "area": "Sales orders",
+ "recording": "recordings/e2/E2-B2-order-stages-ok-superseded.mp4",
+ "minY": 40,
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Each milestone's due date comes from the order's own dates.",
+   "pieces": [
+    [
+     225,
+     236,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "As the order moves on, the team enters the proforma invoice, tax invoice, dispatch and delivery dates.",
+   "pieces": [
+    [
+     240,
+     262,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "The milestone due on delivery then picks up that date automatically.",
+   "pieces": [
+    [
+     293,
+     296,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 225,
+   "x": 20,
+   "y": 330,
+   "w": 1100
+  },
+  {
+   "src": 262,
+   "x": 20,
+   "y": 330,
+   "w": 1100
+  },
+  {
+   "src": 293,
+   "x": 20,
+   "y": 420,
+   "w": 1050
+  }
+ ],
+ "focus": [
+  {
+   "src0": 228,
+   "src1": 236,
+   "x": 55,
+   "y": 425,
+   "w": 980,
+   "h": 70
+  },
+  {
+   "src0": 250,
+   "src1": 262,
+   "x": 785,
+   "y": 465,
+   "w": 230,
+   "h": 50
+  },
+  {
+   "src0": 293.3,
+   "src1": 296,
+   "x": 45,
+   "y": 685,
+   "w": 540,
+   "h": 100
+  }
+ ]
+}

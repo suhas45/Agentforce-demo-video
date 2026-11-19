@@ -1,0 +1,89 @@
+{
+ "id": "M4",
+ "title": "Payments at a glance",
+ "area": "Sales orders",
+ "recording": "recordings/e2/E2-B2-order-stages-ok-superseded.mp4",
+ "minY": 40,
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "The Payment Milestones tab shows the order value, what's been received, deductions, balance and overdue, in one place.",
+   "pieces": [
+    [
+     296,
+     297.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Each milestone shows when it falls due, the amount, what's paid, and the balance.",
+   "pieces": [
+    [
+     297.5,
+     299,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Head Office records each bank transfer against a milestone with Add payment, using its UTR reference.",
+   "pieces": [
+    [
+     299,
+     300.1,
+     1
+    ]
+   ],
+   "say": "Head Office records each bank transfer against a milestone with Add payment, using its U T R reference."
+  }
+ ],
+ "cam": [
+  {
+   "src": 296,
+   "x": 20,
+   "y": 300,
+   "w": 1050
+  },
+  {
+   "src": 300.1,
+   "x": 20,
+   "y": 300,
+   "w": 1050
+  }
+ ],
+ "focus": [
+  {
+   "src0": 296.1,
+   "src1": 297.5,
+   "x": 40,
+   "y": 372,
+   "w": 1000,
+   "h": 64
+  },
+  {
+   "src0": 297.6,
+   "src1": 299,
+   "x": 40,
+   "y": 498,
+   "w": 1000,
+   "h": 150
+  },
+  {
+   "src0": 299.1,
+   "src1": 300.1,
+   "x": 886,
+   "y": 610,
+   "w": 140,
+   "h": 38
+  }
+ ]
+}
