@@ -1,26 +1,32 @@
 {
  "title": "What's new",
- "subtitle": "Payment milestones",
- "total": 4,
+ "subtitle": "Payment milestones and account risk",
+ "total": 7,
  "tickets": [
   "M1",
   "M2",
   "M3",
-  "M4"
+  "M4",
+  "M5",
+  "R1",
+  "R2"
  ],
  "list": [
   "Payment terms picked by segment",
   "Milestones created automatically",
   "Due dates from the order's dates",
-  "Payments at a glance"
+  "Payments at a glance",
+  "Recording a payment",
+  "Risk colour on every account",
+  "Risk warning on new quotes"
  ],
  "voice": "af_heart",
  "speed": 1.0,
  "intro": {
-  "text": "Here's what's new: payment milestones on sales orders. Four improvements, one at a time."
+  "text": "Here's what's new: payment milestones, and account risk. Seven improvements, one at a time."
  },
  "end": {
   "text": "That's everything in this update. Thanks for watching."
  },
- "output": "Whats_New_Payment_Milestones.mp4"
+ "output": "Whats_New_Payments_and_Account_Risk.mp4"
 }

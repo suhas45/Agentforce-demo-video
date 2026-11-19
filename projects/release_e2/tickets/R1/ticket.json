@@ -1,0 +1,151 @@
+{
+ "id": "R1",
+ "title": "Risk colour on every account",
+ "area": "Accounts",
+ "recording": "recordings/e2/account_c.mp4",
+ "minY": 40,
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Salespeople had no quick way to tell whether a customer was safe to do business with.",
+   "pieces": [
+    [
+     56,
+     58.5,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Now, every account shows a coloured risk banner at the top, in plain words: low risk, watch, or high risk.",
+   "pieces": [
+    [
+     58.5,
+     62,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "The risk panel explains why, with the main reason and five areas, from payment and outstanding to deductions.",
+   "pieces": [
+    [
+     62,
+     66,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Below are the numbers behind the colour. An admin can override the colour with a reason, and the calculated colour stays visible.",
+   "pieces": [
+    [
+     66,
+     71.7,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 56,
+   "x": 0,
+   "y": 120,
+   "w": 1600
+  },
+  {
+   "src": 59,
+   "x": 0,
+   "y": 120,
+   "w": 1600
+  },
+  {
+   "src": 60,
+   "x": 20,
+   "y": 180,
+   "w": 1100
+  },
+  {
+   "src": 62,
+   "x": 20,
+   "y": 180,
+   "w": 1100
+  },
+  {
+   "src": 62.6,
+   "x": 810,
+   "y": 300,
+   "w": 790
+  },
+  {
+   "src": 66,
+   "x": 810,
+   "y": 300,
+   "w": 790
+  },
+  {
+   "src": 66.4,
+   "x": 810,
+   "y": 520,
+   "w": 790
+  },
+  {
+   "src": 68.8,
+   "x": 810,
+   "y": 520,
+   "w": 790
+  },
+  {
+   "src": 69.2,
+   "x": 810,
+   "y": 300,
+   "w": 790
+  }
+ ],
+ "focus": [
+  {
+   "src0": 59.3,
+   "src1": 61.8,
+   "x": 40,
+   "y": 258,
+   "w": 1540,
+   "h": 36
+  },
+  {
+   "src0": 62.8,
+   "src1": 66,
+   "x": 830,
+   "y": 505,
+   "w": 750,
+   "h": 160
+  },
+  {
+   "src0": 66.5,
+   "src1": 69,
+   "x": 830,
+   "y": 685,
+   "w": 750,
+   "h": 150
+  },
+  {
+   "src0": 69.2,
+   "src1": 71.7,
+   "x": 830,
+   "y": 400,
+   "w": 750,
+   "h": 45
+  }
+ ]
+}

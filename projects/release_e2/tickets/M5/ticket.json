@@ -1,0 +1,168 @@
+{
+ "id": "M5",
+ "title": "Recording a payment",
+ "area": "Sales orders",
+ "recording": "recordings/e2/payment_c.mp4",
+ "minY": 40,
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "To record a bank transfer, Head Office clicks Add payment on the milestone. The form shows the milestone's balance.",
+   "pieces": [
+    [
+     33,
+     48,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "An amount above the balance is blocked, with a clear message.",
+   "pieces": [
+    [
+     54,
+     62,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "Here, a part payment of twenty thousand rupees is saved, with its bank reference.",
+   "pieces": [
+    [
+     88,
+     98,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "The milestone and the order summary update straight away. Twenty thousand received, eighty thousand still due.",
+   "pieces": [
+    [
+     98,
+     106,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "And the same reference can't be recorded twice on a milestone.",
+   "pieces": [
+    [
+     108,
+     113.8,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 33,
+   "x": 20,
+   "y": 250,
+   "w": 1100
+  },
+  {
+   "src": 37,
+   "x": 20,
+   "y": 250,
+   "w": 1100
+  },
+  {
+   "src": 38.5,
+   "x": 400,
+   "y": 300,
+   "w": 820
+  },
+  {
+   "src": 98,
+   "x": 400,
+   "y": 300,
+   "w": 820
+  },
+  {
+   "src": 99,
+   "x": 20,
+   "y": 300,
+   "w": 1100
+  },
+  {
+   "src": 106,
+   "x": 20,
+   "y": 300,
+   "w": 1100
+  },
+  {
+   "src": 108,
+   "x": 400,
+   "y": 300,
+   "w": 820
+  }
+ ],
+ "focus": [
+  {
+   "src0": 34,
+   "src1": 37,
+   "x": 880,
+   "y": 610,
+   "w": 150,
+   "h": 40
+  },
+  {
+   "src0": 41,
+   "src1": 48,
+   "x": 490,
+   "y": 315,
+   "w": 620,
+   "h": 30
+  },
+  {
+   "src0": 56,
+   "src1": 62,
+   "x": 805,
+   "y": 375,
+   "w": 300,
+   "h": 110
+  },
+  {
+   "src0": 99.5,
+   "src1": 106,
+   "x": 40,
+   "y": 375,
+   "w": 1010,
+   "h": 60
+  },
+  {
+   "src0": 104,
+   "src1": 106,
+   "x": 40,
+   "y": 650,
+   "w": 1000,
+   "h": 60
+  },
+  {
+   "src0": 112,
+   "src1": 113.8,
+   "x": 500,
+   "y": 475,
+   "w": 610,
+   "h": 55
+  }
+ ]
+}

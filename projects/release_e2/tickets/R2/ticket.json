@@ -1,0 +1,113 @@
+{
+ "id": "R2",
+ "title": "Risk warning on new quotes",
+ "area": "Opportunities",
+ "recording": "recordings/e2/account_c.mp4",
+ "minY": 40,
+ "lines": [
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "For a green customer, Create Quote opens the quote screen straight away.",
+   "pieces": [
+    [
+     0,
+     6,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "For a high-risk customer, a warning appears first, with the reasons and the latest late payments.",
+   "pieces": [
+    [
+     9.6,
+     14.8,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "A customer to watch gets a yellow warning. The salesperson can cancel, or continue to the quote. It never blocks.",
+   "pieces": [
+    [
+     27.6,
+     32.4,
+     1
+    ]
+   ]
+  },
+  {
+   "beat": "",
+   "head": "",
+   "sub": "",
+   "text": "And if deals have been lost to competitors, that's flagged too.",
+   "pieces": [
+    [
+     37,
+     44,
+     1
+    ]
+   ]
+  }
+ ],
+ "cam": [
+  {
+   "src": 0,
+   "x": 0,
+   "y": 120,
+   "w": 1600
+  },
+  {
+   "src": 6,
+   "x": 0,
+   "y": 120,
+   "w": 1600
+  },
+  {
+   "src": 9.6,
+   "x": 380,
+   "y": 250,
+   "w": 900
+  },
+  {
+   "src": 44,
+   "x": 380,
+   "y": 250,
+   "w": 900
+  }
+ ],
+ "focus": [
+  {
+   "src0": 10.3,
+   "src1": 14.8,
+   "x": 560,
+   "y": 330,
+   "w": 476,
+   "h": 310
+  },
+  {
+   "src0": 28.1,
+   "src1": 32.4,
+   "x": 560,
+   "y": 330,
+   "w": 476,
+   "h": 310
+  },
+  {
+   "src0": 38,
+   "src1": 44,
+   "x": 570,
+   "y": 380,
+   "w": 460,
+   "h": 210
+  }
+ ]
+}
